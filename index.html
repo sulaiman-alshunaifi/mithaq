@@ -627,7 +627,7 @@ function buildPrompt(vendor, docs, app) {
 قواعد صارمة:
 1. استند فقط إلى نص الوثائق، ولا تفترض وجود أي التزام غير مكتوب.
 2. كل دليل اقتباس حرفي منسوخ كما هو من جملة واحدة، مع رمز الوثيقة ورقم الجملة. لا تعِد الصياغة. اقتبس أقصر جزء حرفي كافٍ لإثبات الحكم فقط (لا الجملة كاملة إن كانت طويلة)، واكتفِ بدليل واحد لكل عنصر ما لم يكن هناك تناقض يستدعي دليلين.
-   استخدم "reason" و"followup" بجملة قصيرة موجزة (لا تتجاوز نحو 15 كلمة) لكل منهما.
+   "reason" جملة واحدة مختصرة جدًا (لا تتجاوز 10 كلمات). "followup" فارغ "" دائمًا للحالة "met"، وللحالات الأخرى سؤال قصير جدًا (لا يتجاوز 10 كلمات) أو فارغ إن لم يلزم.
 3. الحالة "met": التزام صريح ومحدد يغطي كل عناصر المتطلب. "partial": يغطي بعض العناصر، أو التزام غامض بلا آلية أو مدة. "gap": لا يوجد ما يغطيه، أو يوجد ما يخالفه.
 4. متطلبان وطنيان يُشترط فيهما تصريح صريح بعدم مغادرة المملكة: 4-1-3-2 (مركز المراقبة أو التشغيل يعمل بالكامل داخل المملكة) وPDPL-CBT-1 (عدم نقل البيانات الشخصية خارج المملكة دون ضمانات معتمدة). أي ذكر لموقع أو نقل خارج المملكة في أي منهما يعني "gap" لذلك المتطلب تحديدًا.
 5. متطلبات PDPL (رموز "PDPL-") تخص البيانات الشخصية تحديدًا لا بيانات الجهة عمومًا؛ لا تعتبر التزامًا عامًا بحماية "البيانات" كافيًا لمتطلب PDPL ما لم يتحدث النص صراحة عن البيانات الشخصية.
@@ -1311,25 +1311,40 @@ function extractJson(t) {
   if (start === -1 || end === -1 || end < start) return body.trim();
   return body.slice(start, end + 1);
 }
+async function anthropicRequest(prompt, maxTokens, signal) {
+  return fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: { "content-type": "application/json", "x-api-key": getApiKey(), "anthropic-version": "2023-06-01", "anthropic-dangerous-direct-browser-access": "true" },
+    body: JSON.stringify({ model: DIRECT_MODEL, max_tokens: maxTokens, messages: [{ role: "user", content: prompt }] }),
+    signal
+  });
+}
 async function anthropicComplete(prompt, opts = {}) {
   const key = getApiKey();
   if (!key) { const e = new Error("no api key"); e.code = "not_granted"; throw e; }
   if (prompt.length > 600000) { const e = new Error("prompt too large"); e.code = "prompt_too_large"; throw e; }
   let res;
   try {
-    res = await fetch("https://api.anthropic.com/v1/messages", {
-      method: "POST",
-      headers: { "content-type": "application/json", "x-api-key": key, "anthropic-version": "2023-06-01", "anthropic-dangerous-direct-browser-access": "true" },
-      body: JSON.stringify({ model: DIRECT_MODEL, max_tokens: 16000, messages: [{ role: "user", content: prompt }] }),
-      signal: opts.signal
-    });
+    res = await anthropicRequest(prompt, 32000, opts.signal);
+    /* A very high max_tokens can be rejected outright (400) by some accounts/model tiers. Rather than
+       failing the whole analysis, retry once with a conservative value that virtually every account
+       supports, before giving up. */
+    if (res.status === 400) {
+      const retry = await anthropicRequest(prompt, 8192, opts.signal);
+      if (retry.ok) res = retry;
+    }
   } catch (err) {
     if (err && err.name === "AbortError") { const e = new Error("cancelled"); e.code = "cancelled"; throw e; }
     throw err;
   }
   if (res.status === 429) { const e = new Error("rate limited"); e.code = "rate_limited"; throw e; }
   if (res.status === 401 || res.status === 403) { const e = new Error("unauthorized"); e.code = "not_granted"; throw e; }
-  if (!res.ok) throw new Error("http " + res.status);
+  if (!res.ok) {
+    let detail = "";
+    try { const body = await res.json(); detail = (body && body.error && body.error.message) || ""; } catch { /* ignore */ }
+    if (detail) console.error("Anthropic API error:", detail);
+    throw new Error("http " + res.status);
+  }
   const data = await res.json();
   const text = (Array.isArray(data.content) ? data.content : []).map(b => b.text || "").join("");
   if (data.stop_reason === "max_tokens") { const e = new Error("truncated"); e.code = "truncated"; throw e; }
