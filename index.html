@@ -1279,7 +1279,8 @@ const AI_ERR = {
   invalid_json: "لم يُرجع النموذج نتيجة بالصيغة المطلوبة. أعد المحاولة.",
   session_expired: "انتهت جلسة الذكاء الاصطناعي. حدّث الصفحة ثم أعد المحاولة.",
   refused: "رفض النموذج هذا الطلب. راجع النص ثم أعد المحاولة.",
-  prompt_too_large: "الوثائق أطول من الحد المسموح لتحليل واحد. اختصر النص ثم أعد المحاولة."
+  prompt_too_large: "الوثائق أطول من الحد المسموح لتحليل واحد. اختصر النص ثم أعد المحاولة.",
+  truncated: "توقفت إجابة النموذج قبل اكتمالها بسبب طولها. اختصر عدد الجمل ثم أعد المحاولة."
 };
 const aiErr = e => AI_ERR[e && e.code] || "تعذّر الوصول إلى الذكاء الاصطناعي الآن. النتائج المعروضة من محرك القواعد، وهي تعمل دون إنترنت.";
 
@@ -1292,7 +1293,17 @@ const DIRECT_KEY_STORE = "radar.aiApiKey";
 const DIRECT_MODEL = "claude-sonnet-5";
 function getApiKey() { try { return localStorage.getItem(DIRECT_KEY_STORE) || ""; } catch { return ""; } }
 function setApiKey(k) { try { if (k) localStorage.setItem(DIRECT_KEY_STORE, k); else localStorage.removeItem(DIRECT_KEY_STORE); } catch { /* ignore */ } }
-function stripFences(t) { return String(t || "").replace(/^```(?:json)?\s*/i, "").replace(/```\s*$/, "").trim(); }
+/* Robust against a reply that isn't PURE json: strips a ```json fence if present, then falls back to
+   the substring between the first "{" and the last "}" — handles a stray preamble/sentence the model
+   sometimes adds despite instructions not to. */
+function extractJson(t) {
+  const s = String(t || "").trim();
+  const fenced = s.match(/```(?:json)?\s*([\s\S]*?)```/i);
+  const body = fenced ? fenced[1] : s;
+  const start = body.indexOf("{"), end = body.lastIndexOf("}");
+  if (start === -1 || end === -1 || end < start) return body.trim();
+  return body.slice(start, end + 1);
+}
 async function anthropicComplete(prompt, opts = {}) {
   const key = getApiKey();
   if (!key) { const e = new Error("no api key"); e.code = "not_granted"; throw e; }
@@ -1302,7 +1313,7 @@ async function anthropicComplete(prompt, opts = {}) {
     res = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",
       headers: { "content-type": "application/json", "x-api-key": key, "anthropic-version": "2023-06-01", "anthropic-dangerous-direct-browser-access": "true" },
-      body: JSON.stringify({ model: DIRECT_MODEL, max_tokens: 4096, messages: [{ role: "user", content: prompt }] }),
+      body: JSON.stringify({ model: DIRECT_MODEL, max_tokens: 8192, messages: [{ role: "user", content: prompt }] }),
       signal: opts.signal
     });
   } catch (err) {
@@ -1314,6 +1325,7 @@ async function anthropicComplete(prompt, opts = {}) {
   if (!res.ok) throw new Error("http " + res.status);
   const data = await res.json();
   const text = (Array.isArray(data.content) ? data.content : []).map(b => b.text || "").join("");
+  if (data.stop_reason === "max_tokens") { const e = new Error("truncated"); e.code = "truncated"; throw e; }
   if (typeof opts.onText === "function") opts.onText({ text });
   return text;
 }
@@ -1322,7 +1334,7 @@ function makeDirectSample() {
   const fn = async (prompt, opts = {}) => ({ text: await anthropicComplete(prompt, opts) });
   fn.json = async (prompt, opts = {}) => {
     const text = await anthropicComplete(prompt, opts);
-    try { return JSON.parse(stripFences(text)); }
+    try { return JSON.parse(extractJson(text)); }
     catch { const e = new Error("invalid json"); e.code = "invalid_json"; throw e; }
   };
   return fn;
