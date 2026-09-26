@@ -1091,7 +1091,13 @@ async function extractPdfText(buf) {
         if (!text) continue;
         if (s && prevReal) {
           const gap = prevReal.x - (it.x + it.w);
-          if (gap > 40) s += "   "; else if (gap > 2.2 && !/\s$/.test(s)) s += " ";
+          /* Thresholds scale with the PREVIOUS run's own average glyph width instead of a fixed PDF-unit
+             number: a small table-cell font (e.g. inside a two-column spec table) has proportionally
+             smaller real word-gaps in absolute units than body text, so a fixed threshold tuned for
+             body text was swallowing genuine word spaces in smaller table fonts and gluing words
+             together. Scaling by the run's own character width keeps both regimes correct. */
+          const avgCharW = (prevReal.w && prevReal.str.length) ? prevReal.w / prevReal.str.length : 6;
+          if (gap > avgCharW * 3) s += "   "; else if (gap > avgCharW * 0.25 && !/\s$/.test(s)) s += " ";
         }
         s += text; prevReal = it;
       }
