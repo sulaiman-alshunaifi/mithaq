@@ -615,7 +615,7 @@ function runRules(profile, docs) {
 function buildPrompt(vendor, docs, app) {
   const reqs = app.filter(a => a.applies && a.c.scope === "vendor").map(a =>
     `- ${a.c.code} (${a.c.title}): ${a.c.summary}${a.c.elements.length ? " العناصر: " + a.c.elements.join("؛ ") + "." : ""}`).join("\n");
-  const AI_SENT_CAP = 150;
+  const AI_SENT_CAP = 220;
   const truncatedDocs = Object.keys(docs).filter(d => docs[d].length > AI_SENT_CAP);
   const docText = Object.keys(docs).map(d => `[${d}] ${DOC_TITLES[d] || d}\n` + docs[d].slice(0, AI_SENT_CAP).map((s, i) => `S${i + 1}: ${s}`).join("\n")).join("\n\n");
   const truncNote = truncatedDocs.length
