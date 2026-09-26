@@ -1,0 +1,1616 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ميثاق</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Cairo:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f5f6;--surface:#fff;--surface-2:#eef1f3;--line:#dbe2e6;--ink:#12212b;--ink-2:#4b5d69;--ink-3:#6f828d;--accent:#0b7564;--accent-soft:#dff0eb;--accent-ink:#fff;--band:#12212b;--band-ink:#c3d1d9;--band-strong:#fff;--band-line:#26404f;--ok:#2d7a4c;--ok-soft:#e2f1e7;--mid:#8f6500;--mid-soft:#fbf0d2;--hi:#b83232;--hi-soft:#f8e3e3;--info:#2f5f8f;--info-soft:#e4edf6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d161c;--surface:#132028;--surface-2:#1a2a33;--line:#243741;--ink:#e3eaee;--ink-2:#a3b3bc;--ink-3:#7f919b;--accent:#3cb49f;--accent-soft:#10302a;--accent-ink:#06201b;--band:#0a1216;--band-ink:#a9bac3;--band-line:#1d2e37;--ok:#5fbf86;--ok-soft:#12301f;--mid:#e0b441;--mid-soft:#33290d;--hi:#e57373;--hi-soft:#3a1818;--info:#79a7d6;--info-soft:#152636}}
+:root[data-theme="dark"]{--bg:#0d161c;--surface:#132028;--surface-2:#1a2a33;--line:#243741;--ink:#e3eaee;--ink-2:#a3b3bc;--ink-3:#7f919b;--accent:#3cb49f;--accent-soft:#10302a;--accent-ink:#06201b;--band:#0a1216;--band-ink:#a9bac3;--band-line:#1d2e37;--ok:#5fbf86;--ok-soft:#12301f;--mid:#e0b441;--mid-soft:#33290d;--hi:#e57373;--hi-soft:#3a1818;--info:#79a7d6;--info-soft:#152636}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);background:var(--bg)}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+button,input,textarea,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.band{background:var(--band);color:var(--band-ink)}
+.band-top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:16px 0 12px}
+.brand{display:flex;align-items:center;gap:12px;margin-inline-end:auto}
+.brand-mark{width:56px;height:56px;flex:none}
+.brand h1{margin:0;font-size:20px;font-weight:700;font-family:'Cairo','IBM Plex Sans Arabic',sans-serif;color:var(--band-strong);line-height:1.2}
+.brand p{margin:0;font-size:12.5px}
+.pill{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--band-line);border-radius:999px;padding:3px 11px;font-size:12.5px;white-space:nowrap}
+.pill .dot{width:7px;height:7px;border-radius:50%;background:var(--band-ink)}
+.pill.on .dot{background:#4fd1b5}.pill.off .dot{background:#e0b441}
+.pill.demo{border-color:#8f6c14;color:#f1cf73}
+.iconbtn{background:none;border:1px solid var(--band-line);color:var(--band-ink);border-radius:8px;width:32px;height:32px;display:inline-grid;place-items:center;cursor:pointer}
+.iconbtn:hover{color:var(--band-strong)}
+nav.tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav.tabs button{background:none;border:0;border-bottom:2px solid transparent;color:var(--band-ink);padding:10px 14px 12px;cursor:pointer;white-space:nowrap;font-size:14.5px}
+nav.tabs button:hover{color:var(--band-strong)}
+nav.tabs button[aria-selected="true"]{color:var(--band-strong);border-bottom-color:#4fd1b5;font-weight:500}
+main{padding:26px 0 60px}
+.head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.head h2{margin:0;font-size:22px;font-weight:600;line-height:1.35}
+.head p{margin:4px 0 0;color:var(--ink-2);max-width:70ch}
+.grid{display:grid;gap:16px}
+.g-kpi{grid-template-columns:repeat(4,minmax(0,1fr))}
+.g-2{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)}
+.g-2b{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+@media (max-width:900px){.g-kpi{grid-template-columns:repeat(2,minmax(0,1fr))}.g-2,.g-2b{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;min-width:0}
+.card-h{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.card-h h3{margin:0;font-size:15.5px;font-weight:600}
+.card-h .sub{font-size:12.5px;color:var(--ink-3)}
+.card-b{padding:16px 18px}
+.kpi{padding:16px 18px}
+.kpi .l{font-size:13px;color:var(--ink-2)}
+.kpi .v{font-size:33px;font-weight:600;line-height:1.2;font-variant-numeric:tabular-nums;margin-top:4px}
+.kpi .n{font-size:12.5px;color:var(--ink-3);margin-top:2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:38px;padding:0 14px;border-radius:8px;border:1px solid var(--line);background:var(--surface);cursor:pointer;font-size:14px;white-space:nowrap}
+.btn:hover{background:var(--surface-2)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:500}
+.btn.primary:hover{filter:brightness(1.07)}
+.btn[disabled]{opacity:.55;cursor:default}
+.btn svg{width:16px;height:16px}
+.badge{display:inline-flex;align-items:center;gap:5px;border-radius:6px;padding:2px 9px;font-size:12.5px;font-weight:500;white-space:nowrap}
+.s-met{background:var(--ok-soft);color:var(--ok)}.s-partial{background:var(--mid-soft);color:var(--mid)}.s-gap{background:var(--hi-soft);color:var(--hi)}.s-review{background:var(--info-soft);color:var(--info)}.s-na{background:var(--surface-2);color:var(--ink-3)}
+.l-low{background:var(--ok-soft);color:var(--ok)}.l-medium{background:var(--mid-soft);color:var(--mid)}.l-high{background:var(--hi-soft);color:var(--hi)}
+.chip{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:6px;padding:1px 7px;font-size:12px;color:var(--ink-2);background:var(--surface);white-space:nowrap}
+.code{direction:ltr;unicode-bidi:isolate;font-variant-numeric:tabular-nums}
+.muted{color:var(--ink-2)}.faint{color:var(--ink-3)}.small{font-size:13px}
+.rise{animation:rise .5s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.vrow{display:grid;grid-template-columns:minmax(0,1fr) 110px 40px 88px;gap:14px;align-items:center;padding:12px 18px;border-top:1px solid var(--line);cursor:pointer}
+.vrow:first-child{border-top:0}
+.vrow:hover{background:var(--surface-2)}
+.vrow .nm{font-weight:500}
+.bar{height:7px;border-radius:4px;background:var(--surface-2);overflow:hidden}
+.bar>span{display:block;height:100%;width:0;border-radius:4px;transition:width 1s cubic-bezier(.2,.8,.2,1)}
+.hm-wrap{display:grid;grid-template-columns:14px minmax(0,1fr);gap:8px;direction:ltr}
+.hm-y{display:flex;flex-direction:column;justify-content:space-between;padding:8px 0 26px;font-size:12px;color:var(--ink-3)}
+.hm{position:relative;display:grid;grid-template-columns:repeat(5,1fr);grid-template-rows:repeat(5,1fr);aspect-ratio:1.45;gap:3px;direction:ltr}
+.hm .cell{border-radius:5px}
+.hm .c-low{background:var(--ok-soft)}.hm .c-medium{background:var(--mid-soft)}.hm .c-high{background:var(--hi-soft)}
+.hm-dot{position:absolute;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:600;color:#fff;border:2px solid var(--surface);cursor:pointer;transition:left 1.1s cubic-bezier(.2,.8,.2,1),top 1.1s cubic-bezier(.2,.8,.2,1),opacity .4s}
+.hm-x{display:flex;justify-content:space-between;direction:ltr;font-size:12px;color:var(--ink-3);padding:4px 2px 0}
+.ins{display:grid;grid-template-columns:minmax(0,1fr) 44px;gap:10px;align-items:center;padding:8px 0}
+.net text{font-family:inherit}
+table{border-collapse:collapse;width:100%}
+th,td{text-align:start;padding:11px 14px;border-top:1px solid var(--line);vertical-align:top}
+thead th{border-top:0;background:var(--surface-2);font-size:13px;font-weight:500;color:var(--ink-2);white-space:nowrap}
+.tscroll{overflow-x:auto}
+.quote{border-inline-start:3px solid var(--line);padding-inline-start:10px;margin:6px 0 2px;color:var(--ink-2);font-size:13.5px}
+.vq{font-size:12px;color:var(--ok);display:inline-flex;align-items:center;gap:4px}
+.uq{font-size:12px;color:var(--info)}
+.steps{display:grid;gap:8px}
+.step{display:flex;align-items:center;gap:10px;color:var(--ink-3);font-size:14px}
+.step .ic{width:20px;height:20px;border-radius:50%;border:2px solid var(--line);flex:none;display:grid;place-items:center}
+.step.run{color:var(--ink)}.step.run .ic{border-color:var(--accent);border-top-color:transparent;animation:spin .8s linear infinite}
+.step.done{color:var(--ink)}.step.done .ic{border-color:var(--ok);background:var(--ok);color:#fff}
+.step.skip{color:var(--ink-3)}.step.skip .ic{border-color:var(--mid)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.doc{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--surface)}
+.doc[data-mode="cited"] .sent:not(.hit){display:none}
+.doc[data-mode="none"] .sent{display:none}
+.doc-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}
+.doc-head h4{margin:0;font-size:13.5px;font-weight:600;color:var(--ink-2)}
+.doc-toggle{background:none;border:1px solid var(--line);border-radius:6px;padding:3px 10px;font-size:12px;color:var(--ink-2);cursor:pointer;white-space:nowrap}
+.doc-toggle:hover{background:var(--surface-2);color:var(--ink)}
+.upchip{display:none;align-items:center;gap:10px;flex-wrap:wrap;border:1px solid var(--line);border-radius:8px;padding:9px 12px;margin-top:6px;background:var(--surface-2)}
+.upchip-icon{font-size:16px}
+.upchip-name{font-weight:500;font-size:13.5px}
+.upchip-meta{font-size:12.5px;color:var(--ink-3)}
+.upchip button{margin-inline-start:auto}
+.sent{display:flex;align-items:flex-start;gap:10px;padding:8px 6px;font-size:14px;line-height:1.75;border-top:1px solid var(--line)}
+.sent:first-child{border-top:0}
+.sent .sid{flex:none;min-width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:var(--surface-2);color:var(--ink-3);font-size:11.5px;font-weight:600;font-variant-numeric:tabular-nums;margin-top:1px}
+.sent.hit{background:var(--accent-soft)}
+.sent.hit .sid{background:var(--accent);color:var(--accent-ink)}
+.sent.flash{animation:flash 1.6s ease}
+@keyframes flash{0%,60%{background:var(--mid-soft)}100%{background:var(--accent-soft)}}
+textarea{width:100%;min-height:170px;resize:vertical;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--surface);line-height:1.8;font-size:14px}
+.note{font-size:13px;color:var(--ink-2);background:var(--surface-2);border-radius:8px;padding:10px 12px}
+.err{font-size:13.5px;color:var(--hi);background:var(--hi-soft);border-radius:8px;padding:10px 12px}
+.prof{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 14px}
+.prof div{display:flex;justify-content:space-between;gap:8px;font-size:13.5px;border-bottom:1px dashed var(--line);padding-bottom:6px}
+.formula{font-size:13.5px;display:grid;gap:6px}
+.formula .row{display:flex;justify-content:space-between;gap:10px}
+.eval{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.eval .box{background:var(--surface-2);border-radius:10px;padding:12px}
+.eval .box .v{font-size:24px;font-weight:600;font-variant-numeric:tabular-nums}
+.vcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.vcard{padding:16px 18px;cursor:pointer;text-align:start;border:1px solid var(--line);background:var(--surface);border-radius:12px}
+.vcard:hover{border-color:var(--accent)}
+.hidden{display:none!important}
+.linkbtn{background:none;border:0;padding:0;color:var(--accent);cursor:pointer;font-weight:500}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.field{display:block;margin-top:14px}
+.uprow{display:flex;align-items:center;gap:10px;margin-top:6px;flex-wrap:wrap}
+.field>span{display:block;font-size:13.5px;font-weight:500;margin-bottom:6px}
+input[type=text]{width:100%;height:40px;border:1px solid var(--line);border-radius:8px;padding:0 12px;background:var(--surface)}
+input[type=text]:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:0;border-color:var(--accent)}
+.ferr{font-size:13px;color:var(--hi);margin-top:5px;min-height:0}
+.q{border:0;padding:10px 0;margin:0;border-bottom:1px dashed var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.q legend{float:right;font-size:13.5px;padding:0;max-width:60%}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface)}
+.seg label{position:relative;cursor:pointer}
+.seg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.seg span{display:block;padding:5px 14px;font-size:13.5px}
+.seg label+label span{border-inline-start:1px solid var(--line)}
+.seg input:checked+span{background:var(--accent);color:var(--accent-ink);font-weight:500}
+.seg input:focus-visible+span{outline:2px solid var(--accent);outline-offset:-2px}
+.sticky{position:sticky;top:12px}
+.aprow{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:start;gap:10px;padding:9px 0;border-top:1px solid var(--line)}
+.aprow:first-child{border-top:0}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="band">
+  <div class="wrap">
+    <div class="band-top">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true" fill="none">
+          <defs>
+            <linearGradient id="logoGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f6dfa0"/><stop offset="30%" stop-color="#d8a94a"/><stop offset="55%" stop-color="#b9822f"/><stop offset="78%" stop-color="#e6c777"/><stop offset="100%" stop-color="#a8762a"/></linearGradient>
+            <linearGradient id="logoGoldSoft" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#e9c877"/><stop offset="100%" stop-color="#b1832f"/></linearGradient>
+            <radialGradient id="logoGreenGlow" cx="35%" cy="30%" r="75%"><stop offset="0%" stop-color="#2fae7d"/><stop offset="100%" stop-color="#0e5a3c"/></radialGradient>
+          </defs>
+          <circle cx="50" cy="50" r="48" fill="none" stroke="url(#logoGold)" stroke-width="3.3"/>
+          <circle cx="50" cy="50" r="42" fill="none" stroke="url(#logoGoldSoft)" stroke-width="1"/>
+          <circle cx="50" cy="50" r="36" fill="url(#logoGreenGlow)"/>
+          <circle cx="50" cy="50" r="36" fill="none" stroke="url(#logoGold)" stroke-width="1.3"/>
+          <g transform="translate(50,50)">
+            <path d="M0 -37 L29 -24 V6 C29 28 16 42 0 49 C-16 42 -29 28 -29 6 V-24 Z" fill="none" stroke="#f3e3b0" stroke-width="4.2" stroke-linejoin="round"/>
+            <path d="M-14 2 L-4 14 L17 -11" fill="none" stroke="#f3e3b0" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </svg>
+        <div>
+          <h1>ميثاق</h1>
+          <p>تقييم مخاطر الموردين وفق الضوابط الأساسية للأمن السيبراني ECC-2:2024 ونظام حماية البيانات الشخصية PDPL</p>
+        </div>
+      </div>
+      <span class="pill demo" title="الموردون ووثائقهم بيانات تجريبية للعرض">بيانات تجريبية</span>
+      <span class="pill off" id="aiPill"><span class="dot"></span><span id="aiPillText">جارٍ التحقق من الذكاء الاصطناعي</span></span>
+      <button class="iconbtn" id="themeBtn" type="button" aria-label="تبديل الوضع الداكن">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg>
+      </button>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="أقسام المنصة">
+      <button role="tab" data-view="dashboard" aria-selected="true">لوحة المخاطر</button>
+      <button role="tab" data-view="vendors" aria-selected="false">الموردون</button>
+      <button role="tab" data-view="lab" aria-selected="false">المختبر الحي</button>
+      <button role="tab" data-view="library" aria-selected="false">الضوابط والأطر</button>
+    </nav>
+  </div>
+</div>
+<main class="wrap" id="main" tabindex="-1"></main>
+<script>
+"use strict";
+/* ============ Regulatory library (ECC-2:2024, domain 4) ============
+   Summaries are the team's own Arabic wording; the binding text is the official NCA document. */
+const ECC_SOURCE = {
+  label: "الضوابط الأساسية للأمن السيبراني (ECC-2:2024) — المكوّن الأساسي 4",
+  url: "https://nca.gov.sa/en/regulatory-documents/controls-list/ecc/"
+};
+const ISO = {
+  "5.12": "تصنيف المعلومات",
+  "5.19": "أمن المعلومات في العلاقات مع الموردين",
+  "5.20": "معالجة أمن المعلومات ضمن اتفاقيات الموردين",
+  "5.21": "إدارة أمن المعلومات في سلسلة إمداد التقنية والاتصالات",
+  "5.22": "مراقبة خدمات الموردين ومراجعتها وإدارة تغييراتها",
+  "5.23": "أمن المعلومات عند استخدام الخدمات السحابية",
+  "5.24": "التخطيط والاستعداد لإدارة حوادث أمن المعلومات",
+  "6.6": "اتفاقيات السرية أو عدم الإفصاح",
+  "8.10": "حذف المعلومات",
+  "27701-8.2": "ISO/IEC 27701:2019 — البند 8.2: شروط جمع البيانات الشخصية ومعالجتها (يشمل المعالجة وفق تعليمات موثقة)، ضمن ضوابط الملحق B لجهة المعالجة",
+  "27701-8.5": "ISO/IEC 27701:2019 — البند 8.5: مشاركة البيانات الشخصية ونقلها والإفصاح عنها، بما يشمل إدارة معالج من الباطن ونقلها خارج الجهة",
+  "27701-8.4": "ISO/IEC 27701:2019 — البند 8.4: الخصوصية حسب التصميم والمبدأ الافتراضي، بما يشمل إعادة البيانات الشخصية أو إتلافها",
+  "27701-B": "ISO/IEC 27701:2019 — الملحق B: ضوابط جهة المعالجة عمومًا (يشمل الإبلاغ عن الحوادث ضمن التزاماتها تجاه الجهة المتحكمة، دون بند مستقل مرقّم لهذا العنصر تحديدًا)",
+  "27701-6.3.1.1": "ISO/IEC 27701:2019 — البند 6.3.1.1: تعيين جهة اتصال يمكن الرجوع إليها بخصوص معالجة البيانات الشخصية"
+};
+const NIST = {
+  "GV.SC-05": "تضمين متطلبات الأمن السيبراني في العقود والاتفاقيات مع الموردين",
+  "GV.SC-06": "التخطيط والعناية الواجبة قبل الدخول في علاقة مع المورد",
+  "GV.SC-07": "فهم مخاطر المورد وتقييمها ومتابعتها طوال العلاقة",
+  "GV.SC-08": "إشراك الموردين في التخطيط للحوادث والاستجابة والتعافي",
+  "GV.SC-10": "ترتيبات ما بعد انتهاء الشراكة أو اتفاقية الخدمة",
+  "PR.IR-01": "حماية الشبكات والبيئات من الوصول والاستخدام غير المصرح به، بما يشمل عزل البيئات (Network Segmentation)",
+  "GV.RR-02": "تحديد الأدوار والمسؤوليات والصلاحيات المتعلقة بإدارة مخاطر الأمن السيبراني، وإبلاغها وتفهّمها وتطبيقها"
+};
+const SUBDOMAINS = [
+  { code: "4-1", title: "الأمن السيبراني المتعلق بالأطراف الخارجية", page: 30 },
+  { code: "4-2", title: "الأمن السيبراني المتعلق بالحوسبة السحابية والاستضافة", page: 31 }
+];
+/* scope: vendor = assessed from the vendor's package; platform = performed by this platform; entity = internal obligation */
+const CONTROLS = [
+  { code: "4-1-1", sub: "4-1", scope: "vendor", weight: 2, title: "متطلبات الأمن السيبراني في العقود",
+    summary: "تحديد متطلبات الأمن السيبراني ضمن العقود والاتفاقيات مع الأطراف الخارجية وتوثيقها واعتمادها.",
+    elements: ["متطلبات أمن سيبراني موثقة ضمن العقد أو ملحقه"], iso: ["5.19","5.20"], nist: ["GV.SC-05"], when: "all" },
+  { code: "4-1-2-1", sub: "4-1", scope: "vendor", weight: 3, title: "عدم الإفصاح والحذف الآمن للبيانات",
+    summary: "أن يتضمن العقد بنود عدم الإفصاح، وحذف الطرف الخارجي لبيانات الجهة بشكل آمن عند انتهاء الخدمة.",
+    elements: ["بند عدم الإفصاح", "حذف بيانات الجهة بشكل آمن عند انتهاء الخدمة"], iso: ["6.6","8.10","5.20"], nist: ["GV.SC-05","GV.SC-10"], when: "impact" },
+  { code: "4-1-2-2", sub: "4-1", scope: "vendor", weight: 3, title: "إجراءات التواصل عند الحوادث",
+    summary: "أن يحدد العقد إجراءات التواصل عند وقوع حادثة أمن سيبراني.",
+    elements: ["إجراء محدد للإبلاغ عن الحوادث (آلية أو مدة زمنية)"], iso: ["5.20","5.24"], nist: ["GV.SC-08"], when: "impact" },
+  { code: "4-1-2-3", sub: "4-1", scope: "vendor", weight: 2, title: "الالتزام بسياسات الجهة",
+    summary: "إلزام الطرف الخارجي بتطبيق متطلبات وسياسات الأمن السيبراني للجهة والمتطلبات التشريعية والتنظيمية ذات العلاقة.",
+    elements: ["التزام صريح بسياسات أو متطلبات الأمن السيبراني الخاصة بالجهة"], iso: ["5.20"], nist: ["GV.SC-05"], when: "impact" },
+  { code: "4-1-3-1", sub: "4-1", scope: "platform", weight: 0, title: "تقييم المخاطر قبل التعاقد",
+    summary: "إجراء تقييم لمخاطر الأمن السيبراني والتأكد من وجود ضوابط لمعالجتها قبل توقيع العقود، أو عند تغير المتطلبات التشريعية والتنظيمية.",
+    elements: [], iso: ["5.19","5.21"], nist: ["GV.SC-06"], when: "outsourcing" },
+  { code: "4-1-3-2", sub: "4-1", scope: "vendor", weight: 3, national: true, title: "مراكز الخدمات المُدارة داخل المملكة",
+    summary: "أن تكون مراكز الخدمات المُدارة للمراقبة والتشغيل التي تستخدم الدخول عن بُعد موجودة بالكامل داخل المملكة.",
+    elements: ["موقع مركز المراقبة أو التشغيل داخل المملكة بالكامل"], iso: [], nist: [], when: "monitoring" },
+  { code: "4-1-4", sub: "4-1", scope: "vendor", weight: 1, title: "المراجعة الدورية لمتطلبات الأطراف الخارجية",
+    summary: "مراجعة متطلبات الأمن السيبراني الخاصة بالأطراف الخارجية دوريًا.",
+    elements: ["مراجعة دورية محددة لمتطلبات الأمن السيبراني"], iso: ["5.22"], nist: ["GV.SC-07"], when: "all" },
+  { code: "4-2-1", sub: "4-2", scope: "entity", weight: 0, title: "متطلبات استخدام الخدمات السحابية",
+    summary: "تحديد متطلبات الأمن السيبراني لاستخدام خدمات الحوسبة السحابية والاستضافة وتوثيقها واعتمادها.",
+    elements: [], iso: ["5.23"], nist: ["GV.SC-05"], when: "cloud" },
+  { code: "4-2-2", sub: "4-2", scope: "entity", weight: 0, title: "تطبيق متطلبات الخدمات السحابية",
+    summary: "تطبيق متطلبات الأمن السيبراني لخدمات الحوسبة السحابية والاستضافة.",
+    elements: [], iso: ["5.23"], nist: [], when: "cloud" },
+  { code: "4-2-3-1", sub: "4-2", scope: "vendor", weight: 3, title: "حماية البيانات وإعادتها",
+    summary: "أن يحمي مزود الخدمة بيانات الجهة وفق مستوى تصنيفها، ويعيدها بصيغة قابلة للاستخدام عند انتهاء الخدمة.",
+    elements: ["حماية البيانات وفق مستوى تصنيفها", "إعادة البيانات بصيغة قابلة للاستخدام عند انتهاء الخدمة"], iso: ["5.23","5.12"], nist: ["GV.SC-10"], when: "cloud" },
+  { code: "4-2-3-2", sub: "4-2", scope: "vendor", weight: 3, title: "عزل بيئة الجهة",
+    summary: "عزل بيئة الجهة (وخاصة الخوادم الافتراضية) عن بيئات الجهات الأخرى لدى مزود الخدمة السحابية.",
+    elements: ["عزل بيئة الجهة وخوادمها الافتراضية عن العملاء الآخرين"], iso: ["5.23"], nist: ["PR.IR-01"], when: "cloud" },
+  { code: "4-2-4", sub: "4-2", scope: "entity", weight: 0, title: "المراجعة الدورية للخدمات السحابية",
+    summary: "مراجعة متطلبات الأمن السيبراني لخدمات الحوسبة السحابية والاستضافة دوريًا.",
+    elements: [], iso: ["5.22","5.23"], nist: ["GV.SC-07"], when: "cloud" }
+];
+CONTROLS.forEach(c => { if (!c.framework) c.framework = "ECC"; });
+
+/* ============ Regulatory library (Saudi PDPL — processor/vendor relevance only) ============
+   Verified against the law (Royal Decree M/19, 1443H) and its Executive Regulation, both published
+   by SDAIA. This platform evaluates only the provisions concerning a THIRD PARTY processing personal
+   data on the entity's behalf, not the entity's own full PDPL programme. Summaries are the team's own
+   Arabic wording; the binding text is the official law and its Executive Regulation. */
+const PDPL_SOURCE = {
+  label: "نظام حماية البيانات الشخصية ولائحته التنفيذية — الهيئة السعودية للبيانات والذكاء الاصطناعي (SDAIA)",
+  url: "https://sdaia.gov.sa/ar/SDAIA/about/Documents/PDPL_Reg_ar.pdf"
+};
+const PDPL_SUBDOMAINS = [
+  { code: "PDPL-17", title: "اختيار جهة المعالجة (المورد) وضماناتها", article: "المادة 17 من اللائحة التنفيذية" },
+  { code: "PDPL-CBT", title: "نقل البيانات الشخصية إلى خارج المملكة", article: "المادة 29 من النظام ولائحة نقل البيانات خارج المملكة" }
+];
+CONTROLS.push(
+  { code: "PDPL-17-1", sub: "PDPL-17", scope: "vendor", weight: 3, framework: "PDPL", title: "معالجة البيانات وفق تعليمات الجهة وغرضها فقط",
+    summary: "أن يلتزم المورد، بصفته جهة معالجة، بمعالجة البيانات الشخصية فقط وفق تعليمات الجهة (جهة التحكم) وللغرض المتفق عليه، دون تجاوزه.",
+    elements: ["التزام موثق بمعالجة البيانات الشخصية وفق تعليمات الجهة وللغرض المحدد فقط"], iso: ["27701-8.2"], nist: ["GV.SC-05"], when: "personalData" },
+  { code: "PDPL-17-2", sub: "PDPL-17", scope: "vendor", weight: 2, framework: "PDPL", title: "قيود الاستعانة بمعالج من الباطن",
+    summary: "ألا يستعين المورد بمعالج فرعي (Sub-processor) للبيانات الشخصية دون إذن كتابي مسبق من الجهة.",
+    elements: ["بند صريح يقيّد الاستعانة بمعالج من الباطن دون إذن الجهة"], iso: ["27701-8.5"], nist: ["GV.SC-05"], when: "personalData" },
+  { code: "PDPL-17-3", sub: "PDPL-17", scope: "vendor", weight: 3, framework: "PDPL", title: "الإبلاغ عن حوادث البيانات الشخصية",
+    summary: "أن يبلغ المورد الجهة فور علمه بأي تسرب أو تلف أو وصول غير مشروع للبيانات الشخصية، لتمكينها من الوفاء بالتزامها بإشعار الجهة المختصة.",
+    elements: ["إجراء محدد لإبلاغ الجهة عن حوادث البيانات الشخصية"], iso: ["27701-B"], nist: ["GV.SC-08"], when: "personalData" },
+  { code: "PDPL-17-4", sub: "PDPL-17", scope: "vendor", weight: 2, framework: "PDPL", title: "حذف البيانات الشخصية أو إعادتها عند انتهاء التعاقد",
+    summary: "حذف المورد جميع البيانات الشخصية أو إعادتها إلى الجهة عند انتهاء الخدمة، بحسب اختيار الجهة.",
+    elements: ["التزام بحذف أو إعادة البيانات الشخصية عند انتهاء العقد"], iso: ["27701-8.4"], nist: ["GV.SC-10"], when: "personalData" },
+  { code: "PDPL-DPO", sub: "PDPL-17", scope: "vendor", weight: 1, framework: "PDPL", title: "جهة اتصال لحماية البيانات لدى المورد",
+    summary: "وجود مسؤول أو جهة اتصال محددة لدى المورد معنية بحماية البيانات الشخصية، يمكن التواصل معها بشأنها.",
+    elements: ["جهة اتصال أو مسؤول محدد لحماية البيانات الشخصية لدى المورد"], iso: ["27701-6.3.1.1"], nist: ["GV.RR-02"], when: "personalData" },
+  { code: "PDPL-SENS", sub: "PDPL-17", scope: "vendor", weight: 3, framework: "PDPL", title: "ضوابط إضافية للبيانات الشخصية الحساسة",
+    summary: "عند معالجة بيانات شخصية حساسة (كالبيانات الصحية أو الائتمانية أو الأمنية أو الحيوية بحسب تعريف النظام)، التزام المورد بضوابط حماية إضافية تتناسب مع حساسيتها.",
+    elements: ["إقرار بضوابط إضافية لمعالجة البيانات الشخصية الحساسة"], iso: [], nist: [], when: "sensitiveData" },
+  { code: "PDPL-CBT-1", sub: "PDPL-CBT", scope: "vendor", weight: 3, national: true, framework: "PDPL", title: "عدم نقل البيانات الشخصية خارج المملكة إلا بضمانات معتمدة",
+    summary: "ألا يُنقل أي بيانات شخصية إلى خارج المملكة إلا وفق الضمانات التي تحددها اللائحة (كالبنود التعاقدية القياسية) أو إلى جهة ضمن القائمة المعتمدة، وبما لا يمسّ الأمن الوطني أو مصالح المملكة.",
+    elements: ["تصريح بعدم نقل البيانات الشخصية خارج المملكة، أو بيان الضمانات المعتمدة إن وُجد نقل"], iso: ["27701-8.5"], nist: ["GV.SC-07"], when: "personalData" }
+);
+const CTRL = Object.fromEntries(CONTROLS.map(c => [c.code, c]));
+
+const PROFILE_QUESTIONS = [
+  { key: "data", q: "هل يصل المورد إلى بيانات الجهة أو يعالجها؟" },
+  { key: "remote", q: "هل يدخل المورد عن بُعد إلى أنظمة الجهة؟" },
+  { key: "cloud", q: "هل يقدم خدمات حوسبة سحابية أو استضافة؟" },
+  { key: "outsourcing", q: "هل يقدم إسنادًا لتقنية المعلومات أو الأمن السيبراني أو خدمات مُدارة؟" },
+  { key: "monitoring", q: "هل يشغّل مركز مراقبة أو تشغيل مُدارًا يستخدم الدخول عن بُعد؟" },
+  { key: "personalData", q: "هل يعالج المورد بيانات شخصية (تخص أفرادًا) بالنيابة عن الجهة؟" },
+  { key: "sensitiveData", q: "هل من ضمنها بيانات شخصية حساسة (صحية، ائتمانية، أمنية، حيوية)؟" },
+  { key: "criticality", q: "ما مدى أهمية الخدمة لأعمال الجهة؟" }
+];
+const CRIT_LABEL = { 1: "منخفضة", 2: "متوسطة", 3: "عالية" };
+
+/* ============ Demo vendors (fictional) ============ */
+const DOC_TITLES = { D1: "رد المورد على استبيان الأمن السيبراني", D2: "ملحق اتفاقية مستوى الخدمة" };
+const VENDORS = [
+  { id: "madar", name: "المدار للخدمات الأمنية المُدارة", short: "م", service: "مراقبة أمنية مُدارة على مدار الساعة",
+    profile: { data: 1, remote: 1, cloud: 0, outsourcing: 1, monitoring: 1, personalData: 1, sensitiveData: 0, criticality: 3 },
+    docs: {
+      D1: [
+        "نقدم خدمة المراقبة الأمنية على مدار الساعة لأنظمة الجهة عبر الدخول عن بُعد.",
+        "مركز العمليات الأمنية الرئيسي لدينا يقع في مدينة الرياض.",
+        "نلتزم بتطبيق سياسات الأمن السيبراني الخاصة بالجهة والمتطلبات التشريعية والتنظيمية ذات العلاقة.",
+        "يتم إبلاغ الجهة بالحوادث الأمنية عند الحاجة.",
+        "يوقّع جميع موظفينا اتفاقية عدم الإفصاح قبل بدء العمل.",
+        "نستخدم منصة لتحليل السجلات مستضافة لدى سحابة الأفق.",
+        "نعالج أي بيانات شخصية نطّلع عليها أثناء المراقبة فقط وفق تعليمات الجهة وللغرض المتفق عليه."
+      ],
+      D2: [
+        "يتضمن هذا الملحق متطلبات الأمن السيبراني التي يلتزم بها مقدم الخدمة طوال مدة العقد.",
+        "تُقدَّم خدمة المراقبة والتشغيل من مركزنا الإقليمي في دبي لضمان الاستمرارية.",
+        "تُحفظ السجلات والبيانات لدى مقدم الخدمة وفق سياسة الاحتفاظ الداخلية.",
+        "تتم مراجعة متطلبات الأمن السيبراني في هذا الملحق سنويًا."
+      ]
+    } },
+  { id: "ufuq", name: "سحابة الأفق", short: "س", service: "استضافة سحابية لأنظمة الجهة",
+    profile: { data: 1, remote: 0, cloud: 1, outsourcing: 0, monitoring: 0, personalData: 1, sensitiveData: 0, criticality: 3 },
+    docs: {
+      D1: [
+        "نوفر خدمات الحوسبة السحابية والاستضافة لأنظمة الجهة من مراكز بيانات داخل المملكة العربية السعودية بالكامل.",
+        "تحمي الشركة بيانات العملاء وفق مستوى تصنيفها باستخدام التشفير أثناء النقل والتخزين.",
+        "تعمل الخوادم الافتراضية على بنية مشتركة عالية الكفاءة لجميع العملاء.",
+        "يمكن للعميل طلب نسخة من بياناته عند انتهاء الخدمة.",
+        "مراكز البيانات مستأجرة لدى مراكز النخيل للبيانات في جدة.",
+        "نعالج البيانات الشخصية للعملاء فقط وفق تعليماتهم المكتوبة وللغرض المحدد في العقد.",
+        "تُعالَج البيانات الشخصية للعملاء وتُخزَّن بالكامل داخل المملكة العربية السعودية."
+      ],
+      D2: [
+        "يلتزم مقدم الخدمة بمتطلبات الأمن السيبراني الواردة في هذا العقد وبسياسات الأمن السيبراني الخاصة بالجهة.",
+        "يوقّع مقدم الخدمة اتفاقية عدم إفصاح مع الجهة قبل بدء الخدمة.",
+        "يلتزم مقدم الخدمة بإخطار الجهة بأي حادثة أمن سيبراني خلال 24 ساعة من اكتشافها وفق إجراءات التواصل المعتمدة.",
+        "لا يجوز لمقدم الخدمة الاستعانة بأي معالج من الباطن للبيانات الشخصية دون إذن كتابي مسبق من الجهة.",
+        "تتم مراجعة متطلبات الأمن السيبراني دوريًا كل سنة."
+      ]
+    } },
+  { id: "ruwad", name: "الرواد للبرمجيات", short: "ر", service: "تطوير تطبيقات الجهة وصيانتها",
+    profile: { data: 1, remote: 1, cloud: 0, outsourcing: 1, monitoring: 0, personalData: 1, sensitiveData: 0, criticality: 2 },
+    docs: {
+      D1: [
+        "نطوّر تطبيقات الجهة ونصونها عبر الدخول عن بُعد إلى بيئة التطوير.",
+        "نلتزم بأفضل الممارسات العالمية في التطوير الآمن.",
+        "يوقّع فريق العمل اتفاقية سرية وعدم إفصاح.",
+        "نحذف جميع بيانات الجهة من أنظمتنا حذفًا آمنًا عند انتهاء المشروع.",
+        "نستضيف مستودعات الشيفرة لدى سحابة الأفق.",
+        "نلتزم بمعالجة أي بيانات شخصية نطّلع عليها أثناء التطوير فقط للغرض المتفق عليه مع الجهة."
+      ],
+      D2: [
+        "يتضمن العقد ملحقًا بمتطلبات الأمن السيبراني المعتمدة من الجهة.",
+        "عند وقوع حادثة أمن سيبراني يلتزم المورد بإبلاغ مسؤول الأمن السيبراني في الجهة خلال 48 ساعة.",
+        "تتم مراجعة متطلبات الأمن السيبراني مع المورد بشكل دوري كل ستة أشهر."
+      ]
+    } },
+  { id: "nokhba", name: "النخبة لصيانة المرافق", short: "ن", service: "صيانة مباني الجهة ومرافقها",
+    profile: { data: 0, remote: 0, cloud: 0, outsourcing: 0, monitoring: 0, personalData: 0, sensitiveData: 0, criticality: 1 },
+    docs: {
+      D1: [
+        "نقدم خدمات الصيانة الدورية لمباني الجهة ومرافقها.",
+        "لا يصل فريقنا إلى أنظمة الجهة أو بياناتها.",
+        "يلتزم فنيونا بتعليمات الدخول إلى المواقع الحساسة."
+      ],
+      D2: [
+        "يتضمن العقد بندًا بمتطلبات الأمن السيبراني والأمن المادي الواجب على المورد الالتزام بها.",
+        "تتم مراجعة هذه المتطلبات سنويًا عند تجديد العقد."
+      ]
+    } }
+];
+const KNOWN_PARTIES = ["سحابة الأفق", "مراكز النخيل للبيانات", "المخزن الآمن"];
+
+/* ============ Live lab: clean vendor package + mutations with known ground truth ============ */
+const LAB_VENDOR = { id: "lab", name: "درع للخدمات المُدارة", short: "د", service: "مراقبة مُدارة واستضافة سحابية",
+  profile: { data: 1, remote: 1, cloud: 1, outsourcing: 1, monitoring: 1, personalData: 1, sensitiveData: 0, criticality: 3 } };
+const LAB_CLEAN = {
+  D1: [
+    "نقدم خدمات المراقبة الأمنية المُدارة واستضافة الأنظمة السحابية للجهة.",
+    "يعمل مركز العمليات الأمنية الذي يراقب أنظمة الجهة عن بُعد بالكامل من مدينة الرياض داخل المملكة.",
+    "يلتزم المورد بتطبيق سياسات الأمن السيبراني الخاصة بالجهة والمتطلبات التشريعية والتنظيمية ذات العلاقة.",
+    "تُحمى بيانات الجهة وفق مستوى تصنيفها باستخدام التشفير أثناء النقل والتخزين.",
+    "تُعزل بيئة الجهة وخوادمها الافتراضية عن بيئات العملاء الآخرين عزلًا كاملًا.",
+    "نستخدم خدمات النسخ الاحتياطي لدى شركة المخزن الآمن.",
+    "نعالج أي بيانات شخصية نطّلع عليها فقط وفق تعليمات الجهة وللغرض المتفق عليه.",
+    "تُخزَّن البيانات الشخصية التي نعالجها بالكامل داخل المملكة ولا تُنقل خارجها."
+  ],
+  D2: [
+    "يحدد هذا الملحق متطلبات الأمن السيبراني التي يلتزم بها المورد طوال مدة العقد.",
+    "يوقّع المورد وجميع موظفيه اتفاقية عدم إفصاح قبل بدء الخدمة.",
+    "يلتزم المورد بحذف بيانات الجهة حذفًا آمنًا وإعادتها بصيغة قابلة للاستخدام عند انتهاء الخدمة.",
+    "يلتزم المورد بإبلاغ الجهة بأي حادثة أمن سيبراني خلال 24 ساعة من اكتشافها وفق إجراءات التواصل المعتمدة.",
+    "لا نستعين بأي معالج من الباطن للبيانات الشخصية دون إذن كتابي مسبق من الجهة.",
+    "يلتزم المورد بإبلاغ الجهة فور علمه بأي تسرب أو وصول غير مشروع للبيانات الشخصية.",
+    "يلتزم المورد بحذف البيانات الشخصية أو إعادتها إلى الجهة عند انتهاء العقد، بحسب اختيار الجهة.",
+    "لدى المورد مسؤول محدد لحماية البيانات يمكن للجهة التواصل معه في كل ما يخص البيانات الشخصية.",
+    "تتم مراجعة متطلبات الأمن السيبراني في هذا الملحق دوريًا كل سنة."
+  ]
+};
+/* Each mutation edits the clean package; `expect` is the ground truth the platform grades itself against. */
+const MUTATIONS = [
+  { id: "nda", slot: "d2s2", label: "حذف بند عدم الإفصاح", expect: { "4-1-2-1": "partial" },
+    apply: d => { d.D2 = d.D2.filter(s => !s.includes("عدم إفصاح")); } },
+  { id: "deletion", slot: "d2s3", label: "حذف التزام الحذف الآمن للبيانات", expect: { "4-1-2-1": "partial" },
+    apply: d => { d.D2 = d.D2.map(s => s.startsWith("يلتزم المورد بحذف بيانات الجهة") ? "يلتزم المورد بإعادة بيانات الجهة بصيغة قابلة للاستخدام عند انتهاء الخدمة." : s); } },
+  { id: "soc_abroad", slot: "d1s2", label: "نقل مركز المراقبة إلى خارج المملكة", expect: { "4-1-3-2": "gap" },
+    apply: d => { d.D1 = d.D1.map(s => s.startsWith("يعمل مركز العمليات") ? "يعمل مركز العمليات الأمنية الذي يراقب أنظمة الجهة عن بُعد من مركزنا الإقليمي في دبي." : s); } },
+  { id: "soc_conflict", slot: "d1s2", label: "إضافة تناقض في موقع مركز المراقبة", expect: { "4-1-3-2": "gap" }, contradiction: true,
+    apply: d => { d.D2 = d.D2.concat("تُقدَّم خدمة المراقبة من مركز العمليات في القاهرة خلال فترات الذروة."); } },
+  { id: "incident", slot: "d2s4", label: "جعل الإبلاغ عن الحوادث غامضًا", expect: { "4-1-2-2": "partial" },
+    apply: d => { d.D2 = d.D2.map(s => s.includes("حادثة أمن سيبراني خلال") ? "يتم إبلاغ الجهة بالحوادث الأمنية عند الحاجة." : s); } },
+  { id: "policy", slot: "d1s3", label: "استبدال الالتزام بسياسات الجهة بعبارة عامة", expect: { "4-1-2-3": "gap" },
+    apply: d => { d.D1 = d.D1.map(s => s.startsWith("يلتزم المورد بتطبيق") ? "نلتزم بأفضل الممارسات العالمية في الأمن السيبراني." : s); } },
+  { id: "shared", slot: "d1s5", label: "إلغاء عزل بيئة الجهة", expect: { "4-2-3-2": "gap" },
+    apply: d => { d.D1 = d.D1.map(s => s.startsWith("تُعزل بيئة") ? "تعمل الخوادم الافتراضية على بنية مشتركة عالية الكفاءة لجميع العملاء." : s); } },
+  { id: "return", slot: "d2s3", label: "حذف صيغة إعادة البيانات", expect: { "4-2-3-1": "partial" },
+    apply: d => { d.D2 = d.D2.map(s => s.startsWith("يلتزم المورد بحذف بيانات الجهة") ? "يلتزم المورد بحذف بيانات الجهة حذفًا آمنًا عند انتهاء الخدمة." : s); } },
+  { id: "review", slot: "d2s5", label: "حذف المراجعة الدورية", expect: { "4-1-4": "gap" },
+    apply: d => { d.D2 = d.D2.filter(s => !s.startsWith("تتم مراجعة")); } },
+  { id: "pdpl_instruct", slot: "pdpl_instruct", label: "حذف التزام معالجة البيانات وفق تعليمات الجهة (PDPL)", expect: { "PDPL-17-1": "gap" },
+    apply: d => { d.D1 = d.D1.filter(s => !s.includes("وفق تعليمات الجهة")); } },
+  { id: "pdpl_subproc", slot: "pdpl_subproc", label: "حذف قيد الاستعانة بمعالج من الباطن (PDPL)", expect: { "PDPL-17-2": "gap" },
+    apply: d => { d.D2 = d.D2.filter(s => !s.includes("معالج من الباطن")); } },
+  { id: "pdpl_breach", slot: "pdpl_breach", label: "حذف إبلاغ حوادث البيانات الشخصية (PDPL)", expect: { "PDPL-17-3": "gap" },
+    apply: d => { d.D2 = d.D2.filter(s => !s.includes("تسرب أو وصول غير مشروع")); } },
+  { id: "pdpl_cbt_abroad", slot: "pdpl_cbt_abroad", label: "نقل البيانات الشخصية إلى خارج المملكة (PDPL)", expect: { "PDPL-CBT-1": "gap" },
+    apply: d => { d.D1 = d.D1.map(s => s.startsWith("تُخزَّن البيانات الشخصية") ? "تُخزَّن نسخة احتياطية من البيانات الشخصية لدى مركز بيانات شريك في دبي لضمان الاستمرارية." : s); } }
+];
+/* Neutral edits change wording only; a sound analyzer must NOT raise a gap for them. */
+const NEUTRAL = [
+  { id: "n_soc", slot: "d1s2", label: "إعادة صياغة موقع المركز دون تغيير المعنى",
+    apply: d => { d.D1 = d.D1.map(s => s.startsWith("يعمل مركز العمليات") ? "يقع مركز العمليات الأمنية الذي يراقب أنظمة الجهة عن بُعد في الرياض بالمملكة العربية السعودية، ويُدار بالكامل من داخلها." : s); } },
+  { id: "n_order", slot: "order", label: "تغيير ترتيب جمل الاستبيان",
+    apply: d => { d.D1 = [d.D1[0]].concat(d.D1.slice(1).reverse()); } }
+];
+</script>
+<script>
+"use strict";
+/* ============ Text utilities ============ */
+const AR_DIGITS = "٠١٢٣٤٥٦٧٨٩";
+function norm(s) {
+  return String(s || "")
+    // Some Arabic PDF/Word exports copy out as presentation-form glyphs (one shaped
+    // glyph per letter-position) instead of standard letters. NFKC folds them back
+    // to normal Arabic before matching, so pasted text from such files still works.
+    .normalize("NFKC")
+    .replace(/[٠-٩]/g, d => String(AR_DIGITS.indexOf(d)))
+    .replace(/[\u064B-\u065F\u0670\u0640]/g, "")
+    .replace(/[أإآٱ]/g, "ا").replace(/ة/g, "ه").replace(/ى/g, "ي")
+    .replace(/[«»"“”'()\[\],،.:;؛!?؟\-–—]/g, " ")
+    .replace(/\s+/g, " ").trim().toLowerCase();
+}
+function sentencesOf(docs) {
+  const out = [];
+  for (const doc of Object.keys(docs)) docs[doc].forEach((text, i) => out.push({ doc, sid: i + 1, text, n: norm(text) }));
+  return out;
+}
+function find(sents, ...res) { return sents.find(s => res.every(r => r.test(s.n))) || null; }
+/* Prefer a sentence that also matches `betterPattern` (e.g. one with an explicit timeframe) over
+   just the first sentence that satisfies the base requirement — in long uploaded documents the
+   same topic is often mentioned more than once, and the first mention isn't always the best evidence. */
+function findBest(sents, mustPatterns, betterPattern) {
+  const candidates = sents.filter(s => mustPatterns.every(r => r.test(s.n)));
+  if (!candidates.length) return null;
+  return candidates.find(s => betterPattern.test(s.n)) || candidates[0];
+}
+/* Wraps a pattern so find() treats it as "must NOT match" — used to keep an ECC element's generic
+   wording from being accidentally satisfied by a sentence that is scoped to personal data specifically
+   (that case belongs to the matching PDPL element instead, so the two stay independently gradable). */
+const NOT = re => ({ test: s => !re.test(s) });
+const ev = s => s ? { doc: s.doc, sid: s.sid, quote: s.text, verified: true } : null;
+
+/* ============ Applicability ============ */
+function impactCase(p) { return !!(p.data || p.remote || p.criticality >= 2); }
+function applicability(profile) {
+  const p = profile;
+  return CONTROLS.map(c => {
+    let applies = false, reason = "";
+    switch (c.when) {
+      case "all": applies = true; reason = "ينطبق على جميع الأطراف الخارجية."; break;
+      case "impact": {
+        applies = impactCase(p);
+        const why = [p.data && "يصل إلى بيانات الجهة", p.remote && "يدخل عن بُعد إلى أنظمتها", p.criticality >= 2 && `أهمية خدمته ${CRIT_LABEL[p.criticality]}`].filter(Boolean);
+        reason = applies ? `لأن المورد ${why.join("، و")}، فأي خلل لديه قد يؤثر على بيانات الجهة أو خدماتها.` : "لا يصل المورد إلى البيانات أو الأنظمة، وخدمته منخفضة الأهمية.";
+        break; }
+      case "outsourcing": applies = !!p.outsourcing; reason = applies ? "لأن المورد يقدم إسنادًا تقنيًا أو خدمات مُدارة." : "لا يقدم المورد إسنادًا تقنيًا أو خدمات مُدارة."; break;
+      case "monitoring": applies = !!(p.outsourcing && p.monitoring); reason = applies ? "لأن المورد يشغّل مركز مراقبة أو تشغيل مُدارًا عن بُعد." : "لا يشغّل المورد مركز مراقبة أو تشغيل مُدارًا عن بُعد."; break;
+      case "cloud": applies = !!p.cloud; reason = applies ? "لأن المورد يقدم خدمات حوسبة سحابية أو استضافة." : "لا يقدم المورد خدمات سحابية أو استضافة."; break;
+      case "personalData": applies = !!p.personalData; reason = applies ? "لأن المورد يعالج بيانات شخصية بالنيابة عن الجهة، فهو جهة معالجة بموجب نظام حماية البيانات الشخصية." : "لا يعالج المورد بيانات شخصية بالنيابة عن الجهة."; break;
+      case "sensitiveData": applies = !!(p.personalData && p.sensitiveData); reason = applies ? "لأن من ضمن ما يعالجه المورد بيانات شخصية حساسة." : "لا يعالج المورد بيانات شخصية حساسة."; break;
+    }
+    return { c, applies, reason };
+  });
+}
+
+/* ============ Rules engine: deterministic, offline, explainable ============ */
+const RE = {
+  cyberReq: /متطلبات الامن السيبراني/, contract: /(العقد|الاتفاقيه|الملحق)/,
+  nda: /(عدم (ال)?افصاح|سريه)/, del: /(حذف|اتلاف|محو)/, end: /(انتهاء|انهاء)/,
+  incident: /(حادث|حوادث|اختراق)/, notify: /(ابلاغ|اخطار|اشعار|تبليغ|تواصل|اتصال)/, procedure: /(اجراءات|خلال|فورا|فوري|ساعه|مده|دقيقه)/,
+  policyOfEntity: /(سياسات|متطلبات)[^.]{0,45}(الجهه|العميل)/, commit: /(يلتزم|نلتزم|تلتزم|الالتزام|بتطبيق|يطبق|نطبق)/,
+  center: /مركز/, centerKind: /(مراقبه|العمليات|عمليات|تشغيل)/,
+  ksa: /(داخل المملكه|المملكه العربيه السعوديه|بالمملكه|الرياض|جده|الدمام|من داخلها)/,
+  abroad: /(دبي|القاهره|البحرين|المنامه|عمان|الاردن|الهند|اوروبا|خارج المملكه|الاقليمي|اقليمي|لندن|سنغافوره|الكويت|الدوحه)/,
+  fully: /(بالكامل|كليا|حصريا)/,
+  review: /(مراجعه|تحديث)/, periodic: /(دوري|سنوي|سنويا|كل سنه|اشهر|عند تجديد)/, reqWord: /(متطلبات|الملحق|الضوابط)/,
+  protect: /(حمايه|تحمي|تشفير)/, classif: /تصنيف/,
+  giveBack: /(اعاده|اعادتها|تسليم|ارجاع|نسخه)/, format: /(صيغه|قابله للاستخدام)/,
+  isolate: /(عزل|تعزل|فصل|يفصل|تفصل)/, envWord: /(بيئه|خوادم|الخوادم)/,
+  /* PDPL-specific: deliberately narrower than the ECC patterns above so a clause has to speak about
+     personal data specifically, not just "data" in general — this is what keeps the two frameworks'
+     evidence independent instead of one edit silently flipping both. */
+  personalDataWord: /بيانات (ال)?شخصيه/,
+  instructOnly: /(وفق تعليمات|بناء على تعليمات|للغرض المتفق عليه|للغرض المحدد)/,
+  subproc: /(معالج من الباطن|طرف فرعي معالج|مقاول من الباطن)/,
+  subAuth: /(اذن كتابي|اذن مسبق|موافقه كتابيه|موافقه مسبقه)/,
+  breachWord: /(تسرب|تلف البيانات|وصول غير مشروع)/,
+  dpoRole: /(مسؤول|جهه اتصال)/, dpoWord: /حمايه البيانات/,
+  sensAck: /(بيانات حساسه|ضوابط اضافيه)/
+};
+function elementResult(label, s, note) { return { label, status: s ? "met" : "gap", ev: ev(s), note: s ? "" : (note || "لم يُعثر على نص يغطي هذا العنصر.") }; }
+function rulesFor(code, S) {
+  switch (code) {
+    case "4-1-1": return [elementResult("متطلبات موثقة ضمن العقد", find(S, RE.cyberReq, RE.contract))];
+    case "4-1-2-1": return [
+      elementResult("بند عدم الإفصاح", find(S, RE.nda)),
+      elementResult("الحذف الآمن عند انتهاء الخدمة", find(S, RE.del, RE.end, NOT(RE.personalDataWord)))];
+    case "4-1-2-2": {
+      const s = findBest(S, [RE.incident, RE.notify], RE.procedure);
+      if (!s) return [elementResult("إجراء الإبلاغ عن الحوادث", null)];
+      const precise = RE.procedure.test(s.n);
+      return [{ label: "إجراء الإبلاغ عن الحوادث", status: precise ? "met" : "partial", ev: ev(s), note: precise ? "" : "الإبلاغ مذكور دون آلية أو مدة محددة." }];
+    }
+    case "4-1-2-3": return [elementResult("التزام بسياسات الجهة", find(S, RE.policyOfEntity, RE.commit))];
+    case "4-1-3-2": {
+      const centers = S.filter(s => RE.center.test(s.n) && RE.centerKind.test(s.n));
+      const abroad = centers.filter(s => RE.abroad.test(s.n));
+      const inside = centers.filter(s => RE.ksa.test(s.n) && !RE.abroad.test(s.n));
+      const label = "موقع مركز المراقبة أو التشغيل";
+      if (abroad.length) return [{ label, status: "gap", ev: ev(abroad[0]), note: "يُذكر تقديم الخدمة من موقع خارج المملكة.", conflictWith: inside[0] ? ev(inside[0]) : null }];
+      if (inside.length) {
+        const full = inside.find(s => RE.fully.test(s.n));
+        return [full ? { label, status: "met", ev: ev(full), note: "" } : { label, status: "partial", ev: ev(inside[0]), note: "الموقع داخل المملكة، لكن لم يُصرّح بأن المركز يعمل بالكامل من داخلها." }];
+      }
+      return [elementResult(label, null, "لم يُذكر موقع مركز المراقبة أو التشغيل.")];
+    }
+    case "4-1-4": return [elementResult("مراجعة دورية محددة", find(S, RE.review, RE.periodic, RE.reqWord))];
+    case "4-2-3-1": return [
+      elementResult("الحماية وفق مستوى التصنيف", find(S, RE.protect, RE.classif)),
+      elementResult("الإعادة بصيغة قابلة للاستخدام", find(S, RE.giveBack, RE.format))];
+    case "4-2-3-2": return [elementResult("عزل بيئة الجهة", find(S, RE.isolate, RE.envWord))];
+    case "PDPL-17-1": return [elementResult("معالجة وفق تعليمات الجهة وغرضها فقط", find(S, RE.personalDataWord, RE.instructOnly))];
+    case "PDPL-17-2": return [elementResult("قيد على الاستعانة بمعالج من الباطن", find(S, RE.subproc, RE.subAuth))];
+    case "PDPL-17-3": return [elementResult("إبلاغ الجهة عن حوادث البيانات الشخصية", find(S, RE.personalDataWord, RE.breachWord, RE.notify))];
+    case "PDPL-17-4": return [elementResult("حذف أو إعادة البيانات الشخصية عند الانتهاء", find(S, RE.personalDataWord, RE.del, RE.end))];
+    case "PDPL-DPO": return [elementResult("جهة اتصال محددة لحماية البيانات", find(S, RE.dpoRole, RE.dpoWord))];
+    case "PDPL-SENS": return [elementResult("إقرار بضوابط إضافية للبيانات الحساسة", find(S, RE.sensAck))];
+    case "PDPL-CBT-1": {
+      const label = "موقع معالجة أو تخزين البيانات الشخصية";
+      const abroad = S.filter(s => RE.personalDataWord.test(s.n) && RE.abroad.test(s.n));
+      const inside = S.filter(s => RE.personalDataWord.test(s.n) && RE.ksa.test(s.n) && !RE.abroad.test(s.n));
+      if (abroad.length) return [{ label, status: "gap", ev: ev(abroad[0]), note: "يُذكر نقل أو معالجة البيانات الشخصية خارج المملكة دون بيان الضمانات المعتمدة." }];
+      if (inside.length) return [{ label, status: "met", ev: ev(inside[0]), note: "" }];
+      return [elementResult(label, null, "لم يُذكر موقع معالجة أو تخزين البيانات الشخصية.")];
+    }
+  }
+  return [];
+}
+function rollup(elements) {
+  if (!elements.length) return "na";
+  if (elements.every(e => e.status === "met")) return "met";
+  if (elements.every(e => e.status === "gap")) return "gap";
+  return "partial";
+}
+function runRules(profile, docs) {
+  const S = sentencesOf(docs);
+  const app = applicability(profile);
+  const results = {}; const contradictions = [];
+  for (const a of app) {
+    if (!a.applies || a.c.scope !== "vendor") continue;
+    const elements = rulesFor(a.c.code, S);
+    const firstEv = (elements.find(e => e.status !== "gap" && e.ev) || elements.find(e => e.ev) || {}).ev || null;
+    results[a.c.code] = { status: rollup(elements), elements, ev: firstEv };
+    for (const e of elements) if (e.conflictWith) contradictions.push({ a: e.conflictWith, b: e.ev, explanation: "موقع مركز المراقبة داخل المملكة في وثيقة، وخارجها في وثيقة أخرى.", code: a.c.code, source: "rules" });
+  }
+  const fourth = [];
+  for (const s of S) for (const name of KNOWN_PARTIES) if (s.n.includes(norm(name)) && !fourth.some(f => norm(f.name) === norm(name))) fourth.push({ name, service: "", doc: s.doc, sid: s.sid, source: "rules" });
+  return { results, contradictions, fourth, applicability: app };
+}
+
+/* ============ AI engine (via the page's native sample capability, or a direct API call when hosted elsewhere) ============ */
+function buildPrompt(vendor, docs, app) {
+  const reqs = app.filter(a => a.applies && a.c.scope === "vendor").map(a =>
+    `- ${a.c.code} (${a.c.title}): ${a.c.summary}${a.c.elements.length ? " العناصر: " + a.c.elements.join("؛ ") + "." : ""}`).join("\n");
+  const AI_SENT_CAP = 150;
+  const truncatedDocs = Object.keys(docs).filter(d => docs[d].length > AI_SENT_CAP);
+  const docText = Object.keys(docs).map(d => `[${d}] ${DOC_TITLES[d] || d}\n` + docs[d].slice(0, AI_SENT_CAP).map((s, i) => `S${i + 1}: ${s}`).join("\n")).join("\n\n");
+  const truncNote = truncatedDocs.length
+    ? `\n\nملاحظة: تجاوز طول ${truncatedDocs.join(" و")} الحد المرسل لهذا التحليل، فاقتصر النص أعلاه على أول ${AI_SENT_CAP} جملة من كل وثيقة تجاوزت هذا الطول. اعتبر أي متطلب لا يظهر دليله ضمن هذا النطاق "gap" بسبب عدم التغطية، لا بالضرورة غيابه من بقية الوثيقة.`
+    : "";
+  return `أنت مدقق خبير في إطارين تنظيميين سعوديين: الضوابط الأساسية للأمن السيبراني ECC-2:2024 الصادرة عن الهيئة الوطنية للأمن السيبراني، ونظام حماية البيانات الشخصية ولائحته التنفيذية الصادرين عن الهيئة السعودية للبيانات والذكاء الاصطناعي (SDAIA).
+المهمة: تقييم وثائق المورد "${vendor.name}" (${vendor.service}) مقابل المتطلبات المنطبقة أدناه فقط، وهي من الإطارين معًا حسب انطباقها (رموز تبدأ بـ"PDPL-" من نظام حماية البيانات الشخصية، والباقي من ECC).
+
+قواعد صارمة:
+1. استند فقط إلى نص الوثائق، ولا تفترض وجود أي التزام غير مكتوب.
+2. كل دليل اقتباس حرفي منسوخ كما هو من جملة واحدة، مع رمز الوثيقة ورقم الجملة. لا تعِد الصياغة.
+3. الحالة "met": التزام صريح ومحدد يغطي كل عناصر المتطلب. "partial": يغطي بعض العناصر، أو التزام غامض بلا آلية أو مدة. "gap": لا يوجد ما يغطيه، أو يوجد ما يخالفه.
+4. متطلبان وطنيان يُشترط فيهما تصريح صريح بعدم مغادرة المملكة: 4-1-3-2 (مركز المراقبة أو التشغيل يعمل بالكامل داخل المملكة) وPDPL-CBT-1 (عدم نقل البيانات الشخصية خارج المملكة دون ضمانات معتمدة). أي ذكر لموقع أو نقل خارج المملكة في أي منهما يعني "gap" لذلك المتطلب تحديدًا.
+5. متطلبات PDPL (رموز "PDPL-") تخص البيانات الشخصية تحديدًا لا بيانات الجهة عمومًا؛ لا تعتبر التزامًا عامًا بحماية "البيانات" كافيًا لمتطلب PDPL ما لم يتحدث النص صراحة عن البيانات الشخصية.
+6. اكتشف التناقضات بين الجمل، مثل موقعين مختلفين للخدمة نفسها أو التزامين متعارضين.
+7. استخرج الأطراف الرابعة: أي شركة أو جهة يعتمد عليها المورد في تقديم خدمته (استضافة، مراكز بيانات، نسخ احتياطي، منصات).${truncNote}
+
+المتطلبات المنطبقة:
+${reqs}
+
+الوثائق:
+${docText}
+
+أعد JSON فقط بهذا الشكل، وأدرج كل متطلب من القائمة مرة واحدة بالضبط:
+{"requirements":[{"code":"4-1-2-1","status":"met|partial|gap","evidence":[{"doc":"D2","sid":2,"quote":"نص منسوخ حرفيًا"}],"reason":"جملة عربية قصيرة تشرح الحكم","followup":"سؤال متابعة للمورد، أو نص فارغ إذا كان المتطلب مستوفى"}],"contradictions":[{"a":{"doc":"D1","sid":2,"quote":"..."},"b":{"doc":"D2","sid":2,"quote":"..."},"explanation":"..."}],"fourth_parties":[{"name":"...","service":"...","doc":"D1","sid":6}]}`;
+}
+function verifyQuote(docs, e) {
+  if (!e || typeof e.quote !== "string" || !e.quote.trim()) return null;
+  const q = norm(e.quote);
+  if (q.length < 4) return null;
+  const list = docs[e.doc];
+  const sid = Number(e.sid);
+  if (list && list[sid - 1] && norm(list[sid - 1]).includes(q)) return { doc: e.doc, sid, quote: e.quote, verified: true };
+  for (const d of Object.keys(docs)) {
+    const i = docs[d].findIndex(s => norm(s).includes(q));
+    if (i >= 0) return { doc: d, sid: i + 1, quote: e.quote, verified: true, relocated: true };
+  }
+  return null;
+}
+function parseAI(raw, docs, app) {
+  const codes = app.filter(a => a.applies && a.c.scope === "vendor").map(a => a.c.code);
+  const out = { results: {}, contradictions: [], fourth: [], dropped: 0 };
+  const reqs = Array.isArray(raw && raw.requirements) ? raw.requirements : [];
+  for (const code of codes) {
+    const r = reqs.find(x => x && String(x.code).trim() === code);
+    if (!r || !["met", "partial", "gap"].includes(r.status)) { out.results[code] = { status: "review", evidence: [], reason: "لم يُرجع النموذج حكمًا صالحًا لهذا المتطلب.", followup: "" }; continue; }
+    const evs = (Array.isArray(r.evidence) ? r.evidence : []).map(e => verifyQuote(docs, e));
+    const verified = evs.filter(Boolean); out.dropped += evs.length - verified.length;
+    let status = r.status;
+    if ((status === "met" || status === "partial") && !verified.length) status = "review";
+    out.results[code] = { status, evidence: verified, unverified: evs.length - verified.length, reason: String(r.reason || ""), followup: String(r.followup || "") };
+  }
+  for (const c of (Array.isArray(raw && raw.contradictions) ? raw.contradictions : [])) {
+    const a = verifyQuote(docs, c && c.a), b = verifyQuote(docs, c && c.b);
+    if (a && b) out.contradictions.push({ a, b, explanation: String(c.explanation || ""), source: "ai" }); else out.dropped++;
+  }
+  for (const f of (Array.isArray(raw && raw.fourth_parties) ? raw.fourth_parties : [])) {
+    const name = String((f && f.name) || "").replace(/^شركة\s+/, "").trim();
+    if (name && !out.fourth.some(x => norm(x.name) === norm(name))) out.fourth.push({ name, service: String(f.service || ""), doc: f.doc, sid: f.sid, source: "ai" });
+  }
+  return out;
+}
+
+/* ============ Combining both engines ============ */
+function combine(rules, ai) {
+  const final = {};
+  for (const code of Object.keys(rules.results)) {
+    const r = rules.results[code];
+    const a = ai ? ai.results[code] : null;
+    const rulesReason = r.elements.map(e => e.note).filter(Boolean).join(" ");
+    if (!a) { final[code] = { status: r.status, source: "rules", agree: null, ev: r.ev, reason: rulesReason, followup: "", rulesEv: r.ev, rulesReason }; continue; }
+    final[code] = { status: a.status, source: "ai", agree: a.status === r.status, ev: a.evidence[0] || null, reason: a.reason, followup: a.followup, rulesEv: r.ev, rulesReason };
+  }
+  const contradictions = ai ? ai.contradictions.slice() : [];
+  for (const c of rules.contradictions) if (!contradictions.some(x => x.a.doc === c.a.doc && x.a.sid === c.a.sid)) contradictions.push(c);
+  const fourth = (ai ? ai.fourth : []).slice();
+  for (const f of rules.fourth) if (!fourth.some(x => norm(x.name).includes(norm(f.name)) || norm(f.name).includes(norm(x.name)))) fourth.push(f);
+  return { final, contradictions, fourth };
+}
+
+/* ============ Explainable risk score (Impact × Likelihood) ============ */
+const STATUS_WEIGHT = { met: 0, partial: 0.5, review: 0.5, gap: 1 };
+function scoreOf(profile, final, contradictions) {
+  const p = profile;
+  const impactF = [
+    { label: "أساس ثابت لأي طرف خارجي", v: 1 },
+    { label: "يصل إلى بيانات الجهة", v: p.data ? 1 : 0 },
+    { label: "يدخل عن بُعد إلى الأنظمة", v: p.remote ? 1 : 0 },
+    { label: "خدمات مُدارة أو سحابية", v: (p.outsourcing || p.cloud) ? 1 : 0 },
+    { label: "يعالج بيانات شخصية بالنيابة عن الجهة", v: p.personalData ? 1 : 0 },
+    { label: "أهمية الخدمة عالية", v: p.criticality === 3 ? 1 : 0 }
+  ];
+  const impact = Math.min(5, impactF.reduce((t, f) => t + f.v, 0));
+  let total = 0, lost = 0; const gapF = [];
+  for (const code of Object.keys(final)) {
+    const w = CTRL[code].weight, sw = STATUS_WEIGHT[final[code].status] ?? 0;
+    total += w; lost += w * sw;
+    if (sw > 0) gapF.push({ code, label: CTRL[code].title, v: Math.round(w * sw * 10) / 10, status: final[code].status });
+  }
+  const ratio = total ? lost / total : 0;
+  const base = 1 + Math.round(ratio * 4);
+  const contra = contradictions.length ? 1 : 0;
+  const likelihood = Math.min(5, base + contra);
+  const risk = impact * likelihood;
+  const level = risk >= 15 ? "high" : risk >= 7 ? "medium" : "low";
+  return { impact, likelihood, risk, score: risk * 4, level, impactF, gapF, ratio, total, lost, contra };
+}
+const LEVEL_LABEL = { low: "منخفض", medium: "متوسط", high: "عالٍ" };
+const STATUS_LABEL = { met: "مستوفى", partial: "جزئي", gap: "فجوة", review: "يحتاج مراجعة", na: "لا ينطبق" };
+</script>
+<script>
+"use strict";
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+/* Renders a number with Arabic-Indic digits (٠-٩) instead of Western ones, for the statistics and
+   scores the UI displays — keeps regulatory/framework codes (4-1-1, ISO 5.19, S3…) in their
+   conventional Latin-numeral form since those are cross-referenced identifiers, not read-aloud counts. */
+const AR_OUT_DIGITS = "٠١٢٣٤٥٦٧٨٩";
+const N = n => String(n).replace(/[0-9]/g, d => AR_OUT_DIGITS[d]);
+const main = $("#main");
+const LEVEL_COLOR = { low: "var(--ok)", medium: "var(--mid)", high: "var(--hi)" };
+const STORE_KEY = "radar.ai.v2";
+
+const state = { view: "dashboard", vendorId: null, analyses: {}, sample: null, downloads: null, busy: null,
+  lab: { docs: clone(LAB_CLEAN), applied: [], neutral: [], edited: false, result: null, running: false } };
+
+function clone(o) { return JSON.parse(JSON.stringify(o)); }
+function hashDocs(d) { const s = JSON.stringify(d); let h = 5381; for (let i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) | 0; return String(h); }
+function loadStore() { try { return JSON.parse(localStorage.getItem(STORE_KEY) || "{}") || {}; } catch { return {}; } }
+function saveStore(obj) { try { localStorage.setItem(STORE_KEY, JSON.stringify(obj)); } catch { /* storage unavailable: results stay for this session */ } }
+function fmtTime(ts) { return new Intl.DateTimeFormat("ar-SA-u-nu-latn-ca-gregory", { dateStyle: "medium", timeStyle: "short" }).format(new Date(ts)); }
+
+/* ---------- vendors added in this browser ---------- */
+const CUSTOM_KEY = "radar.vendors.v1";
+const BUILTIN_IDS = new Set(VENDORS.map(v => v.id));
+function loadCustomVendors() {
+  let list = [];
+  try { list = JSON.parse(localStorage.getItem(CUSTOM_KEY) || "[]") || []; } catch { list = []; }
+  for (const v of list) if (v && v.id && !VENDORS.some(x => x.id === v.id)) VENDORS.push({ ...v, custom: true });
+}
+function saveCustomVendors() {
+  const list = VENDORS.filter(v => v.custom).map(({ id, name, short, service, profile, docs }) => ({ id, name, short, service, profile, docs }));
+  try { localStorage.setItem(CUSTOM_KEY, JSON.stringify(list)); return true; } catch { return false; }
+}
+function splitSentences(text) {
+  const out = [];
+  // NFKC: some Arabic PDF/Word exports paste as presentation-form glyphs instead of
+  // standard letters; folding here keeps the stored sentence text itself canonical
+  // (matching in the rules engine is normalized separately, see norm()).
+  for (const line of String(text || "").normalize("NFKC").replace(/\r/g, "").split("\n")) {
+    for (const part of line.split(/(?<=[.!?؟])\s+/)) { const t = part.trim(); if (t.length > 1) out.push(t.slice(0, 600)); }
+  }
+  return out.slice(0, 400);
+}
+function initialOf(name) { const n = String(name).trim().replace(/^(شركة|مؤسسة)\s+/, "").replace(/^ال/, ""); return n.charAt(0) || "؟"; }
+
+/* ---------- analysis state ---------- */
+function analyze(vendor, docs, aiRaw, at) {
+  const rules = runRules(vendor.profile, docs);
+  const ai = aiRaw ? parseAI(aiRaw, docs, rules.applicability) : null;
+  const comb = combine(rules, ai);
+  const score = scoreOf(vendor.profile, comb.final, comb.contradictions);
+  return { rules, ai, ...comb, score, at: aiRaw ? at : null };
+}
+function initAnalyses() {
+  const store = loadStore();
+  for (const v of VENDORS) {
+    const saved = store[v.id];
+    const ok = saved && saved.hash === hashDocs(v.docs);
+    state.analyses[v.id] = analyze(v, v.docs, ok ? saved.raw : null, ok ? saved.at : null);
+  }
+}
+function persistAI(v, raw, at) { const s = loadStore(); s[v.id] = { hash: hashDocs(v.docs), raw, at }; saveStore(s); }
+
+/* ---------- shared bits ---------- */
+const statusBadge = st => `<span class="badge s-${st}">${STATUS_LABEL[st] || st}</span>`;
+const levelBadge = lv => `<span class="badge l-${lv}">خطر ${LEVEL_LABEL[lv]}</span>`;
+const codeTag = c => `<span class="chip code">${(CTRL[c] && CTRL[c].framework) || (c.startsWith("PDPL") ? "PDPL" : "ECC")} ${esc(c)}</span>`;
+const isoLabel = k => k === "27701-B" ? "27701 — الملحق B" : k.startsWith("27701-") ? "27701 — البند " + k.slice(6) : "A." + k;
+const isoChip = k => `<span class="chip code" title="${esc(ISO[k])}">${isoLabel(k)}</span>`;
+function evRef(e) { return e ? `<button class="linkbtn small code" data-act="jump" data-doc="${e.doc}" data-sid="${e.sid}">${e.doc}·S${e.sid}</button>` : ""; }
+function countUp(el, target, suffix = "") {
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduce) { el.textContent = N(target) + suffix; return; }
+  const t0 = performance.now(), dur = 900;
+  const tick = t => { const k = Math.min(1, (t - t0) / dur); el.textContent = N(Math.round(target * (1 - Math.pow(1 - k, 3)))) + suffix; if (k < 1) requestAnimationFrame(tick); };
+  requestAnimationFrame(tick);
+}
+function animateBars(root) { requestAnimationFrame(() => requestAnimationFrame(() => $$(".bar>span[data-w]", root).forEach(b => { b.style.width = b.dataset.w + "%"; }))); }
+function vendorsAr(n) { return n === 1 ? "مورد واحد" : n === 2 ? "موردَين" : n <= 10 ? `${N(n)} موردين` : `${N(n)} موردًا`; }
+function openCount(a) { return Object.values(a.final).filter(f => f.status !== "met").length; }
+
+/* ---------- navigation ---------- */
+function go(view, vendorId) {
+  state.view = view; if (vendorId !== undefined) state.vendorId = vendorId;
+  $$("nav.tabs button").forEach(b => b.setAttribute("aria-selected", String(b.dataset.view === view)));
+  render(); main.focus({ preventScroll: true }); window.scrollTo({ top: 0 });
+}
+function render() {
+  if (state.view === "dashboard") renderDashboard();
+  else if (state.view === "vendors") state.vendorId === "new" ? renderVendorForm() : state.vendorId ? renderVendor(state.vendorId) : renderVendorList();
+  else if (state.view === "lab") renderLab();
+  else renderLibrary();
+}
+
+/* ---------- dashboard ---------- */
+function renderDashboard() {
+  const list = VENDORS.map(v => ({ v, a: state.analyses[v.id] })).sort((x, y) => y.a.score.risk - x.a.score.risk);
+  const high = list.filter(x => x.a.score.level === "high").length;
+  const open = list.reduce((t, x) => t + openCount(x.a), 0);
+  let met = 0, assessed = 0; list.forEach(x => Object.values(x.a.final).forEach(f => { assessed++; if (f.status === "met") met++; }));
+  const deep = list.filter(x => x.a.ai).length;
+  main.innerHTML = `
+  <div class="head rise"><div><h2>لوحة مخاطر الأطراف الخارجية</h2>
+    <p>كل رقم هنا محسوب الآن من وثائق الموردين: محرك القواعد يعمل فورًا دون إنترنت، والتحليل العميق بالذكاء الاصطناعي يعمل عند طلبه من صفحة المورد.</p></div>
+    <span class="chip">${N(deep)} من ${N(list.length)} موردين حُللوا بالذكاء الاصطناعي</span></div>
+  <div class="grid g-kpi">
+    ${[["الموردون", list.length, "", "في هذا العرض"], ["مخاطر عالية", high, "", "تحتاج قرارًا عاجلًا"], ["فجوات مفتوحة", open, "", "جزئي أو فجوة أو يحتاج مراجعة"], ["نسبة الاستيفاء", assessed ? Math.round(met / assessed * 100) : 0, "%", "من المتطلبات المنطبقة"]]
+      .map((k, i) => `<div class="card kpi rise" style="animation-delay:${i * 70}ms"><div class="l">${k[0]}</div><div class="v" data-count="${k[1]}" data-suffix="${k[2]}">0</div><div class="n">${k[3]}</div></div>`).join("")}
+  </div>
+  <div class="grid g-2" style="margin-top:16px">
+    <section class="card rise" style="animation-delay:120ms"><div class="card-h"><h3>خريطة المخاطر</h3><span class="sub">الأثر × الاحتمالية</span></div>
+      <div class="card-b"><div class="hm-wrap"><div class="hm-y"><span>5</span><span>1</span></div><div><div class="hm" id="hm">${heatCells()}</div>
+      <div class="hm-x"><span>1</span><span>5</span></div></div></div>
+      <p class="small faint" style="margin:6px 0 0">المحور الرأسي: الأثر · المحور الأفقي: الاحتمالية. اضغط على أي نقطة لفتح المورد.</p></div></section>
+    <section class="card rise" style="animation-delay:180ms"><div class="card-h"><h3>ترتيب الموردين حسب الخطر</h3><span class="sub">اضغط على أي مورد</span></div>
+      <div>${list.map(({ v, a }) => `<div class="vrow" data-act="vendor" data-id="${v.id}" role="button" tabindex="0">
+        <div><div class="nm">${esc(v.name)}</div><div class="small faint">${esc(v.service)}</div></div>
+        <div class="bar"><span data-w="${a.score.score}" style="background:${LEVEL_COLOR[a.score.level]}"></span></div>
+        <div class="code" style="font-weight:600;font-size:16.5px;color:${LEVEL_COLOR[a.score.level]}">${N(a.score.score)}</div>
+        <div>${levelBadge(a.score.level)}</div></div>`).join("")}</div></section>
+  </div>
+  <div class="grid g-2b" style="margin-top:16px">
+    <section class="card rise" style="animation-delay:240ms"><div class="card-h"><h3>أكثر الفجوات تكرارًا</h3><span class="sub">على مستوى كل الموردين</span></div>
+      <div class="card-b">${insights()}</div></section>
+    <section class="card rise" style="animation-delay:300ms"><div class="card-h"><h3>شبكة الأطراف الرابعة</h3><span class="sub">من يعتمد عليه مورّدوك</span></div>
+      <div class="card-b">${networkSVG()}</div></section>
+  </div>`;
+  $$("[data-count]").forEach(el => countUp(el, Number(el.dataset.count), el.dataset.suffix));
+  animateBars(main); placeDots(list);
+}
+function heatCells() {
+  let h = "";
+  for (let i = 5; i >= 1; i--) for (let l = 1; l <= 5; l++) { const r = i * l; h += `<div class="cell c-${r >= 15 ? "high" : r >= 7 ? "medium" : "low"}" title="الأثر ${i} × الاحتمالية ${l} = ${r}"></div>`; }
+  return h;
+}
+function placeDots(list) {
+  const hm = $("#hm"); if (!hm) return;
+  const seen = {};
+  list.forEach(({ v, a }, idx) => {
+    const key = a.score.impact + "-" + a.score.likelihood; const k = seen[key] = (seen[key] || 0) + 1;
+    const d = document.createElement("button");
+    d.className = "hm-dot"; d.type = "button"; d.dataset.act = "vendor"; d.dataset.id = v.id;
+    d.style.background = LEVEL_COLOR[a.score.level]; d.textContent = v.short;
+    d.setAttribute("aria-label", `${v.name}: الأثر ${a.score.impact}، الاحتمالية ${a.score.likelihood}`);
+    d.title = `${v.name} — الأثر ${a.score.impact} × الاحتمالية ${a.score.likelihood}`;
+    d.style.left = "50%"; d.style.top = "50%"; d.style.opacity = "0";
+    hm.appendChild(d);
+    const off = k === 1 ? 0 : (k % 2 ? -1 : 1) * Math.ceil((k - 1) / 2) * 34;
+    setTimeout(() => {
+      d.style.opacity = "1";
+      d.style.left = `calc(${(a.score.likelihood - 0.5) / 5 * 100}% + ${off}px)`;
+      d.style.top = `${(5 - a.score.impact + 0.5) / 5 * 100}%`;
+    }, 250 + idx * 150);
+  });
+}
+function insights() {
+  const rows = [];
+  for (const c of CONTROLS.filter(c => c.scope === "vendor")) {
+    let app = 0, bad = 0;
+    for (const v of VENDORS) { const f = state.analyses[v.id].final[c.code]; if (f) { app++; if (f.status !== "met") bad++; } }
+    if (app && bad) rows.push({ c, app, bad, pct: Math.round(bad / app * 100) });
+  }
+  rows.sort((a, b) => b.bad - a.bad || b.pct - a.pct);
+  if (!rows.length) return `<p class="muted">لا توجد فجوات مفتوحة لدى أي مورد.</p>`;
+  const top = rows[0];
+  const note = top.bad >= 2
+    ? `تتكرر فجوة «${esc(top.c.title)}» (${codeTag(top.c.code)}) لدى ${vendorsAr(top.bad)}. حين تتكرر الفجوة نفسها، فالعلاج الأسرع غالبًا تعديل نموذج العقد نفسه بدل متابعة كل مورد على حدة.`
+    : `لا تتكرر أي فجوة لدى أكثر من مورد حاليًا، فالفجوات خاصة بكل مورد وتُعالج بالمتابعة المباشرة.`;
+  return rows.slice(0, 5).map(r => `<div class="ins" title="${r.bad} من ${r.app} موردين تنطبق عليهم هذا الضابط لم يستوفوه"><div><div class="small">${codeTag(r.c.code)} ${esc(r.c.title)}</div>
+    <div class="bar" style="margin-top:6px"><span data-w="${r.pct}" style="background:var(--hi)"></span></div></div>
+    <div class="small" style="text-align:end;white-space:nowrap">${N(r.bad)} من ${N(r.app)}</div></div>`).join("")
+    + `<p class="note" style="margin:12px 0 0">${note}</p>`;
+}
+function networkSVG() {
+  const W = 600, H = 390, cx = 300, cy = 195;
+  const vs = VENDORS.map((v, i) => { const ang = -Math.PI / 2 + i * 2 * Math.PI / VENDORS.length; return { id: v.id, v, x: cx + 165 * Math.cos(ang), y: cy + 112 * Math.sin(ang), ang }; });
+  const byName = n => vs.find(x => norm(x.v.name).includes(norm(n)) || norm(n).includes(norm(x.v.name)));
+  const parties = []; const edges = []; const inbound = {};
+  for (const x of vs) for (const f of state.analyses[x.id].fourth) {
+    const target = byName(f.name);
+    if (target && target.id === x.id) continue;
+    let key;
+    if (target) key = "v:" + target.id;
+    else { let p = parties.find(p => norm(p.name) === norm(f.name)); if (!p) { const ang = x.ang + (parties.length % 2 ? 0.35 : -0.35); p = { name: f.name, x: cx + 262 * Math.cos(ang), y: cy + 168 * Math.sin(ang) }; p.x = Math.max(70, Math.min(W - 70, p.x)); p.y = Math.max(22, Math.min(H - 22, p.y)); parties.push(p); } key = "p:" + p.name; }
+    edges.push({ from: x, key }); inbound[key] = (inbound[key] || 0) + 1;
+  }
+  const pos = key => key.startsWith("v:") ? vs.find(x => "v:" + x.id === key) : parties.find(p => "p:" + p.name === key);
+  const conc = Object.entries(inbound).filter(([, n]) => n >= 2);
+  let s = `<svg class="net" viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="شبكة اعتماد الموردين على أطراف رابعة">`;
+  for (const x of vs) s += `<line x1="${cx}" y1="${cy}" x2="${x.x}" y2="${x.y}" stroke="var(--line)" stroke-width="2"/>`;
+  for (const e of edges) { const t = pos(e.key); const hot = inbound[e.key] >= 2; s += `<line x1="${e.from.x}" y1="${e.from.y}" x2="${t.x}" y2="${t.y}" stroke="${hot ? "var(--hi)" : "var(--ink-3)"}" stroke-width="${hot ? 2 : 1.4}" stroke-dasharray="5 4"/>`; }
+  s += `<circle cx="${cx}" cy="${cy}" r="30" fill="var(--accent)"/><text x="${cx}" y="${cy + 5}" text-anchor="middle" font-size="14" font-weight="600" fill="var(--accent-ink)">الجهة</text>`;
+  for (const x of vs) {
+    const a = state.analyses[x.id]; const hot = inbound["v:" + x.id] >= 2;
+    s += `<g style="cursor:pointer" data-act="vendor" data-id="${x.id}">${hot ? `<circle cx="${x.x}" cy="${x.y}" r="26" fill="none" stroke="var(--hi)" stroke-width="2"/>` : ""}
+      <circle cx="${x.x}" cy="${x.y}" r="20" fill="${LEVEL_COLOR[a.score.level]}"/><text x="${x.x}" y="${x.y + 5}" text-anchor="middle" font-size="14" font-weight="600" fill="#fff">${esc(x.v.short)}</text>
+      <text x="${x.x}" y="${x.y < cy ? x.y - 32 : x.y + 42}" text-anchor="middle" font-size="12.5" fill="var(--ink)" paint-order="stroke" stroke="var(--surface)" stroke-width="4">${esc(x.v.name)}</text></g>`;
+  }
+  for (const p of parties) { const hot = inbound["p:" + p.name] >= 2; s += `<rect x="${p.x - 62}" y="${p.y - 14}" width="124" height="28" rx="14" fill="var(--surface-2)" stroke="${hot ? "var(--hi)" : "var(--line)"}"/><text x="${p.x}" y="${p.y + 5}" text-anchor="middle" font-size="12" fill="var(--ink-2)">${esc(p.name)}</text>`; }
+  s += `</svg>`;
+  const legend = conc.length ? conc.map(([k, n]) => { const t = pos(k); const nm = k.startsWith("v:") ? t.v.name : t.name; return `<p class="note" style="margin:10px 0 0"><strong style="color:var(--hi)">خطر تركّز:</strong> يعتمد ${vendorsAr(n)} من مورديك على «${esc(nm)}». تعطّله أو اختراقه يؤثر على أكثر من خدمة في الوقت نفسه.</p>`; }).join("")
+    : `<p class="small faint" style="margin:8px 0 0">لا يوجد طرف رابع يعتمد عليه أكثر من مورد.</p>`;
+  return s + legend;
+}
+
+/* ---------- vendors ---------- */
+function renderVendorList() {
+  main.innerHTML = `<div class="head rise"><div><h2>الموردون</h2><p>ملف كل مورد وأدلته وتقييمه. اختر موردًا لعرض التحليل الكامل، أو أضف موردًا جديدًا.</p></div>
+    <button class="btn primary" data-act="newVendor">إضافة مورد</button></div>
+  <div class="vcards">${VENDORS.map((v, i) => { const a = state.analyses[v.id]; return `<button class="vcard rise" style="animation-delay:${i * 70}ms" data-act="vendor" data-id="${v.id}">
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><strong>${esc(v.name)}</strong>${levelBadge(a.score.level)}</div>${v.custom ? `<span class="chip" style="margin-top:4px">أُضيف في هذا المتصفح</span>` : ""}
+    <div class="small muted" style="margin-top:2px">${esc(v.service)}</div>
+    <div class="bar" style="margin-top:12px"><span data-w="${a.score.score}" style="background:${LEVEL_COLOR[a.score.level]}"></span></div>
+    <div class="small faint" style="margin-top:8px">${N(Object.keys(a.final).length)} متطلبات منطبقة · ${N(openCount(a))} مفتوحة · ${a.ai ? "حُلل بالذكاء الاصطناعي" : "محرك القواعد"}</div></button>`; }).join("")}</div>`;
+  animateBars(main);
+}
+function summaryLine(v, a) {
+  const sc = a.score;
+  const total = Object.keys(a.final).length;
+  const open = openCount(a);
+  const top = sc.gapF.slice().sort((x, y) => y.v - x.v).slice(0, 2).map(g => g.label);
+  const topText = top.length ? `أبرزها: ${top.join("، ")}.` : "";
+  const openText = open ? `${N(open)} من ${N(total)} متطلبًا غير مستوفى بالكامل. ${topText}` : `المتطلبات الـ${N(total)} كلها مستوفاة.`;
+  const fitHint = total && open / total > 0.7
+    ? ` <br><span class="small muted">فجوات كثيرة بهذا الحجم قد تعني أن الوثيقتين لا تحتويان نصوص التزامات فعلية (كبنود العقد أو رد الاستبيان)، لا شهادات أو مواصفات عامة فقط.</span>` : "";
+  return `<div class="card rise" style="padding:16px 20px;margin-bottom:16px;border-color:${LEVEL_COLOR[sc.level]}">
+    <p style="margin:0;font-size:15.5px;line-height:1.8"><strong>الخلاصة:</strong> ${esc(v.name)} في مستوى ${levelBadge(sc.level)} (${N(sc.score)} من ١٠٠). ${openText}${a.contradictions.length ? ` وُجد ${a.contradictions.length === 1 ? "تناقض واحد" : N(a.contradictions.length) + " تناقضات"} بين وثائق المورد.` : ""} راجع الأدلة أدناه لاتخاذ القرار.${fitHint}</p>
+  </div>`;
+}
+function renderVendor(id) {
+  const v = VENDORS.find(x => x.id === id); if (!v) return go("vendors", null);
+  const a = state.analyses[id]; const sc = a.score;
+  const cited = new Set(); Object.values(a.final).forEach(f => f.ev && cited.add(f.ev.doc + ":" + f.ev.sid));
+  a.contradictions.forEach(c => { cited.add(c.a.doc + ":" + c.a.sid); cited.add(c.b.doc + ":" + c.b.sid); });
+  // If the cited sentence's exact wording also appears elsewhere (e.g. the same document pasted into
+  // both D1 and D2), mark that duplicate too — otherwise the untouched copy reads as if nothing in it
+  // was ever found, even though its content is exactly what produced the citation.
+  const allSents = sentencesOf(v.docs);
+  const citedNorms = new Set([...cited].map(key => {
+    const i = key.lastIndexOf(":"), doc = key.slice(0, i), sid = Number(key.slice(i + 1));
+    const s = allSents.find(x => x.doc === doc && x.sid === sid);
+    return s ? s.n : null;
+  }).filter(Boolean));
+  allSents.forEach(s => { if (citedNorms.has(s.n)) cited.add(s.doc + ":" + s.sid); });
+  const busy = state.busy && state.busy.vendorId === id;
+  main.innerHTML = `
+  <button class="linkbtn small" data-act="back">→ كل الموردين</button>
+  <div class="head rise" style="margin-top:8px"><div><h2>${esc(v.name)}</h2><p>${esc(v.service)}</p></div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+      <span class="code" style="font-size:32px;font-weight:600;color:${LEVEL_COLOR[sc.level]}">${N(sc.score)}</span>${levelBadge(sc.level)}
+      ${state.sample ? `<button class="btn primary" data-act="ai" ${busy ? "disabled" : ""}>${a.ai ? "أعد التحليل بالذكاء الاصطناعي" : "حلّل بالذكاء الاصطناعي"}</button>
+      <button class="btn" data-act="followup" ${busy || !openCount(a) ? "disabled" : ""}>رسالة متابعة للمورد</button>` : ""}
+      ${state.downloads ? `<button class="btn" data-act="report">تنزيل التقرير</button>` : ""}
+      ${v.custom ? `<button class="btn" data-act="delVendor" ${busy ? "disabled" : ""}>حذف المورد</button>` : ""}
+    </div></div>
+  <p class="small faint" style="margin:-8px 0 16px">مصدر النتائج: ${a.ai ? `محرك القواعد + الذكاء الاصطناعي (تحليل ${fmtTime(a.at)})، مع التحقق من كل اقتباس` : "محرك القواعد (فوري ودون إنترنت)"}</p>
+  ${summaryLine(v, a)}
+  <div id="progress"></div>
+  <div class="grid g-2b">
+    <section class="card rise"><div class="card-h"><h3>ملف المورد</h3><span class="sub">يحدد الضوابط المنطبقة</span></div>
+      <div class="card-b prof">${PROFILE_QUESTIONS.map(q => `<div><span class="muted">${esc(q.q)}</span><strong>${q.key === "criticality" ? CRIT_LABEL[v.profile.criticality] : v.profile[q.key] ? "نعم" : "لا"}</strong></div>`).join("")}</div></section>
+    <section class="card rise" style="animation-delay:60ms"><div class="card-h"><h3>كيف حُسبت الدرجة؟</h3><span class="sub">الأثر × الاحتمالية × 4</span></div>
+      <div class="card-b formula">
+        ${sc.impactF.filter(f => f.v).map(f => `<div class="row"><span class="muted">${esc(f.label)}</span><span class="code">+${N(f.v)}</span></div>`).join("")}
+        <div class="row" style="border-top:1px solid var(--line);padding-top:6px"><strong>الأثر</strong><strong class="code">${N(sc.impact)} / ٥</strong></div>
+        <div class="row"><span class="muted">وزن المتطلبات غير المستوفاة</span><span>${N(Math.round(sc.lost * 10) / 10)} من ${N(sc.total)}</span></div>
+        ${sc.contra ? `<div class="row"><span class="muted">تناقض بين وثائق المورد</span><span class="code">+١</span></div>` : ""}
+        <div class="row" style="border-top:1px solid var(--line);padding-top:6px"><strong>الاحتمالية</strong><strong>${N(sc.likelihood)} من ٥</strong></div>
+        <div class="row"><strong>الدرجة</strong><strong class="code" style="color:${LEVEL_COLOR[sc.level]}">${N(sc.impact)} × ${N(sc.likelihood)} × ٤ = ${N(sc.score)}</strong></div>
+      </div></section>
+  </div>
+  ${a.contradictions.length ? `<section class="card rise" style="margin-top:16px;border-color:var(--hi)"><div class="card-h"><h3 style="color:var(--hi)">تناقضات بين وثائق المورد</h3><span class="sub">${a.contradictions.length}</span></div>
+    <div class="card-b">${a.contradictions.map(c => `<p style="margin:0 0 6px">${esc(c.explanation)}</p><div class="quote">«${esc(c.a.quote)}» ${evRef(c.a)}</div><div class="quote">«${esc(c.b.quote)}» ${evRef(c.b)}</div>`).join("<hr style='border:0;border-top:1px solid var(--line);margin:12px 0'>")}</div></section>` : ""}
+  <section class="card rise" style="margin-top:16px"><div class="card-h"><h3>الأدلة مقابل الضوابط</h3><span class="sub">كل ضابط: حكم القواعد ودليله، بجانب النتيجة النهائية ودليلها، وما يقابله في ISO وNIST</span></div>
+    <div class="tscroll"><table><thead><tr><th>الضابط</th><th style="min-width:270px">القواعد</th><th style="min-width:270px">النتيجة النهائية</th><th>ISO 27001:2022</th><th>NIST CSF 2.0</th></tr></thead><tbody>
+    ${Object.keys(a.final).map((code, i) => { const f = a.final[code], c = CTRL[code], r = a.rules.results[code];
+      const rulesBody = f.rulesEv
+        ? `<div class="quote">«${esc(f.rulesEv.quote)}»</div><span class="vq">✓ موجود حرفيًا في ${evRef(f.rulesEv)}</span>`
+        : `<span class="small muted">لم يُعثر على نص يغطي هذا العنصر.</span>`;
+      const finalBody = f.ev
+        ? `<div class="quote">«${esc(f.ev.quote)}»</div><span class="vq">✓ موجود حرفيًا في ${evRef(f.ev)}</span>`
+        : `<span class="small muted">لا يوجد نص يغطي المتطلب.</span>`;
+      return `<tr class="rise" style="animation-delay:${i * 60}ms"><td style="min-width:190px">${codeTag(code)}<div style="margin-top:4px;font-weight:500">${esc(c.title)}</div>${c.national ? `<span class="chip" style="margin-top:4px;color:var(--hi)">متطلب وطني</span>` : ""}</td>
+      <td>${statusBadge(r.status)}<div style="margin-top:6px">${rulesBody}</div>${f.rulesReason ? `<div class="small muted" style="margin-top:4px">${esc(f.rulesReason)}</div>` : ""}</td>
+      <td>${statusBadge(f.status)}${f.agree === false ? `<span class="small" style="color:var(--info)"> — يختلف عن القواعد</span>` : ""}<div style="margin-top:6px">${finalBody}</div>
+        ${f.reason ? `<div class="small muted" style="margin-top:4px">${esc(f.reason)}</div>` : ""}${f.unverified ? `<div class="uq">استُبعد ${f.unverified} اقتباس لم يُعثر عليه حرفيًا في النص.</div>` : ""}</td>
+      <td>${c.iso.map(isoChip).join(" ") || `<span class="small faint">لا مقابل مباشر</span>`}</td>
+      <td>${c.nist.map(k => `<span class="chip code" title="${esc(NIST[k])}">${k}</span>`).join(" ") || `<span class="small faint">لا مقابل مباشر</span>`}</td></tr>`; }).join("")}
+    </tbody></table></div></section>
+  <div id="followupBox"></div>
+  <div class="grid g-2b" style="margin-top:16px">
+    ${Object.keys(v.docs).map(d => {
+      const total = v.docs[d].length;
+      const citedN = v.docs[d].filter((_, i) => cited.has(d + ":" + (i + 1))).length;
+      const mode = citedN > 0 ? "cited" : "none";
+      const toggleBtn = `<button type="button" class="doc-toggle" data-act="toggleDoc">عرض النص الكامل (${total} جملة)</button>`;
+      const note = citedN === 0
+        ? `<p class="small faint" style="margin:0 0 8px">لا توجد جمل مُستشهد بها من هذه الوثيقة (من أصل ${total}). السبب المرجّح: محتواها لا يطابق نمط بنود الالتزام التي يبحث عنها التحليل (كشهادات أو فهارس عامة بدل نصوص تعاقدية)، أو أن كل الأدلة المطابقة وُجدت في الوثيقة الأخرى لتطابق المحتوى بينهما.</p><p style="margin:0 0 10px">${toggleBtn}</p>`
+        : "";
+      return `<section class="doc rise" data-mode="${mode}" data-default-mode="${mode}"><div class="doc-head"><h4>${d} — ${esc(DOC_TITLES[d])}</h4>
+        ${mode === "cited" ? toggleBtn : ""}</div>
+        ${note}
+        ${v.docs[d].map((s, i) => `<span class="sent ${cited.has(d + ":" + (i + 1)) ? "hit" : ""}" id="s-${d}-${i + 1}"><span class="sid code">S${i + 1}</span>${esc(s)}</span>`).join("")}</section>`;
+    }).join("")}
+  </div>
+  <section class="card rise" style="margin-top:16px"><div class="card-h"><h3>لماذا انطبقت هذه الضوابط؟</h3><span class="sub">محسوبة من ملف المورد</span></div>
+    <div class="tscroll"><table><tbody>${a.rules.applicability.map(x => `<tr><td style="width:120px">${codeTag(x.c.code)}</td><td>${esc(x.c.title)}</td>
+      <td>${!x.applies ? `<span class="badge s-na">لا ينطبق</span>` : x.c.scope === "vendor" ? `<span class="badge s-met">يُقيّم من الوثائق</span>` : x.c.scope === "platform" ? `<span class="badge s-review">تنفذه هذه المنصة</span>` : `<span class="badge s-na">التزام داخلي على الجهة</span>`}</td>
+      <td class="small muted">${esc(x.reason)}</td></tr>`).join("")}</tbody></table></div></section>`;
+  if (busy) renderSteps(state.busy);
+}
+
+/* ---------- file upload: extract text from PDF/Word/text in-browser ---------- */
+const PDFJS_BASE = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/";
+const MAMMOTH_URL = "https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.12.3/mammoth.browser.min.js";
+const _loadedScripts = {};
+function loadScriptOnce(url) {
+  if (_loadedScripts[url]) return _loadedScripts[url];
+  _loadedScripts[url] = new Promise((resolve, reject) => {
+    const el = document.createElement("script");
+    el.src = url; el.onload = () => resolve(); el.onerror = () => reject(new Error("تعذّر تحميل مكتبة القراءة من الشبكة."));
+    document.head.appendChild(el);
+  });
+  return _loadedScripts[url];
+}
+async function ensurePdfJs() {
+  if (!window.pdfjsLib) await loadScriptOnce(PDFJS_BASE + "pdf.min.js");
+  if (!window.pdfjsLib) throw new Error("تعذّر تحميل مكتبة قراءة PDF.");
+  window.pdfjsLib.GlobalWorkerOptions.workerSrc = PDFJS_BASE + "pdf.worker.min.js";
+  return window.pdfjsLib;
+}
+async function ensureMammoth() {
+  if (!window.mammoth) await loadScriptOnce(MAMMOTH_URL);
+  if (!window.mammoth) throw new Error("تعذّر تحميل مكتبة قراءة Word.");
+  return window.mammoth;
+}
+/* PDF text is stored per glyph-run with only a position, not a reading order — this rebuilds
+   right-to-left lines from those positions instead of the left-to-right order pdf.js exposes. */
+async function extractPdfText(buf) {
+  const pdfjsLib = await ensurePdfJs();
+  const pdf = await pdfjsLib.getDocument({ data: buf }).promise;
+  const pages = [];
+  for (let i = 1; i <= pdf.numPages; i++) {
+    const page = await pdf.getPage(i);
+    const tc = await page.getTextContent();
+    const items = tc.items.map(it => ({ str: it.str, x: it.transform[4], y: Math.round(it.transform[5]), w: it.width || 0 }));
+    if (!items.length) continue;
+    const lines = {};
+    for (const it of items) {
+      let key = null;
+      for (const k of Object.keys(lines)) { if (Math.abs(Number(k) - it.y) <= 2) { key = k; break; } }
+      if (key === null) key = it.y;
+      (lines[key] = lines[key] || []).push(it);
+    }
+    const ys = Object.keys(lines).map(Number).sort((a, b) => b - a);
+    const pageLines = ys.map(y => {
+      const row = lines[y].slice().sort((a, b) => b.x - a.x);
+      let s = "", prevReal = null;
+      for (const it of row) {
+        const text = it.str.replace(/[\u064B-\u0652]/g, ""); // diacritics: norm() strips them anyway; keeping them only misplaces spaces
+        if (!text) continue;
+        if (s && prevReal) {
+          const gap = prevReal.x - (it.x + it.w);
+          if (gap > 40) s += "   "; else if (gap > 2.2 && !/\s$/.test(s)) s += " ";
+        }
+        s += text; prevReal = it;
+      }
+      return s;
+    });
+    pages.push(pageLines.filter(l => l.trim()).join("\n"));
+  }
+  let joined = pages.join("\n\n").normalize("NFKC");
+  for (let pass = 0; pass < 2; pass++) joined = joined.replace(/([\u0600-\u06FF])[ \t]([\u0600-\u06FF])(?=[ \t\n.,،؛:)\]]|$)/gu, "$1$2");
+  return joined.trim();
+}
+async function extractDocxText(buf) {
+  const mammoth = await ensureMammoth();
+  const res = await mammoth.extractRawText({ arrayBuffer: buf });
+  return res.value.normalize("NFKC").trim();
+}
+async function extractFileText(file) {
+  const name = (file.name || "").toLowerCase();
+  if (file.size > 20 * 1024 * 1024) throw new Error("الملف أكبر من الحد المسموح (20 ميغابايت).");
+  if (/\.(txt|md)$/.test(name) || /^text\//.test(file.type)) return (await file.text()).normalize("NFKC").trim();
+  if (/\.pdf$/.test(name) || file.type === "application/pdf") {
+    const text = await extractPdfText(await file.arrayBuffer());
+    if (text.replace(/\s/g, "").length < 20) throw new Error("لم يُعثر على نص في هذا الملف. قد يكون مستندًا ممسوحًا ضوئيًا (صورة) دون طبقة نص قابلة للاستخراج؛ الصق النص يدويًا في هذه الحالة.");
+    return text;
+  }
+  if (/\.docx$/.test(name) || file.type === "application/vnd.openxmlformats-officedocument.wordprocessingml.document") {
+    return await extractDocxText(await file.arrayBuffer());
+  }
+  if (/\.doc$/.test(name)) throw new Error("صيغة Word القديمة (.doc) غير مدعومة، فقط .docx. احفظ الملف بصيغة .docx ثم أعد المحاولة.");
+  throw new Error("صيغة غير مدعومة. الصيغ المقبولة: PDF، Word (.docx)، أو نص عادي (.txt).");
+}
+function uploadRow(targetId) {
+  return `<div class="uprow">
+    <label class="btn small" for="${targetId}File">رفع ملف (PDF أو Word أو نص)</label>
+    <input type="file" id="${targetId}File" data-target="${targetId}" accept=".pdf,.docx,.doc,.txt,.md" class="sr">
+    <span class="small" id="${targetId}FileStatus"></span>
+  </div>`;
+}
+function collapseToChip(textarea, filename, charCount, sentCount) {
+  const id = textarea.id;
+  let chip = document.getElementById(id + "Chip");
+  if (!chip) {
+    chip = document.createElement("div");
+    chip.className = "upchip";
+    chip.id = id + "Chip";
+    textarea.insertAdjacentElement("beforebegin", chip);
+  }
+  chip.innerHTML = `<span class="upchip-icon">📄</span><span class="upchip-name">${esc(filename)}</span>
+    <span class="upchip-meta">${charCount.toLocaleString("ar")} حرفًا · ${sentCount.toLocaleString("ar")} جملة تقريبًا</span>
+    <button type="button" class="linkbtn small" data-act="editUpload" data-target="${id}">تحرير النص</button>`;
+  chip.style.display = "flex";
+  textarea.style.display = "none";
+}
+function expandFromChip(targetId) {
+  const textarea = document.getElementById(targetId);
+  const chip = document.getElementById(targetId + "Chip");
+  if (chip) chip.style.display = "none";
+  if (textarea) { textarea.style.display = ""; textarea.focus(); }
+}
+async function handleFileUpload(input) {
+  const targetId = input.dataset.target;
+  const status = document.getElementById(targetId + "FileStatus");
+  const textarea = document.getElementById(targetId);
+  const file = input.files && input.files[0];
+  if (!file || !textarea) return;
+  const chip = document.getElementById(targetId + "Chip"); if (chip) chip.style.display = "none";
+  textarea.style.display = "";
+  if (status) { status.textContent = `جارٍ استخراج النص من «${file.name}»…`; status.className = "small muted"; }
+  try {
+    const text = await extractFileText(file);
+    textarea.value = text;
+    textarea.dispatchEvent(new Event("input", { bubbles: true }));
+    const sentCount = splitSentences(text).length;
+    const truncNote = sentCount >= 400 ? " سيُكتفى بأول 400 جملة عند التحليل نظرًا لطول النص." : "";
+    const otherId = { fD1: "fD2", fD2: "fD1", labD1: "labD2", labD2: "labD1" }[targetId];
+    const other = otherId && document.getElementById(otherId);
+    const dupNote = other && other.value.trim() && norm(other.value) === norm(text)
+      ? ` <strong style="color:var(--mid)">هذا النص مطابق لِما في ${otherId.includes("D1") ? "D1" : "D2"} — إن كان الملف نفسه، أفرغ أحد الصندوقين بدل تكراره في الاثنين، فهذا لا يضيف دليلًا جديدًا ويُضخّم حجم المستند بلا فائدة.</strong>` : "";
+    if (status) { status.textContent = ""; status.innerHTML = `تم استخراج النص من «${esc(file.name)}».${truncNote}${dupNote}`; status.className = "small"; status.style.color = dupNote ? "var(--mid)" : "var(--ok)"; }
+    collapseToChip(textarea, file.name, text.length, sentCount);
+  } catch (e) {
+    if (status) { status.textContent = e && e.message ? e.message : "تعذّر قراءة الملف."; status.className = "small"; status.style.color = "var(--hi)"; }
+  } finally {
+    input.value = "";
+  }
+}
+
+/* ---------- add vendor ---------- */
+const DOC_PLACEHOLDER = {
+  D1: "الصق هنا رد المورد على استبيان الأمن السيبراني، أو ارفع ملفًا. مثال:\nنقدم خدمة الدعم الفني لأنظمة الجهة عن بُعد.\nيقع مركز الدعم في مدينة جدة.",
+  D2: "الصق هنا بنود العقد أو ملحق اتفاقية مستوى الخدمة، أو ارفع ملفًا. مثال:\nيلتزم المورد بإبلاغ الجهة بأي حادثة أمن سيبراني خلال 24 ساعة."
+};
+function segYesNo(key) {
+  return `<div class="seg" role="radiogroup">${[["1", "نعم"], ["0", "لا"]].map(([v, t]) => `<label><input type="radio" name="q_${key}" value="${v}" ${v === "0" ? "checked" : ""}><span>${t}</span></label>`).join("")}</div>`;
+}
+function renderVendorForm() {
+  main.innerHTML = `
+  <button class="linkbtn small" data-act="back">→ كل الموردين</button>
+  <div class="head rise" style="margin-top:8px"><div><h2>إضافة مورد جديد</h2>
+    <p>أجب عن ستة أسئلة لتحديد الضوابط المنطبقة، ثم الصق مستند المورد (كملحق اتفاقية مستوى الخدمة، أو أي وثيقة تعاقدية) أو ارفعه كملف PDF أو Word. إن كان لديك مستند ثانٍ منفصل (كرد المورد على استبيان الأمن السيبراني)، يمكنك إضافته اختياريًا أدناه. تقسّم المنصة النص إلى جمل تلقائيًا، ويبدأ التحليل فور الإضافة.</p></div></div>
+  <div class="grid g-2">
+    <section class="card rise"><div class="card-h"><h3>بيانات المورد</h3></div><div class="card-b">
+      <label class="field"><span>اسم المورد</span><input type="text" id="fName" maxlength="80" placeholder="شركة الحلول الرقمية"></label><div class="ferr" id="eName"></div>
+      <label class="field"><span>الخدمة التي يقدمها</span><input type="text" id="fService" maxlength="120" placeholder="دعم فني عن بُعد لنظام الموارد البشرية"></label><div class="ferr" id="eService"></div>
+      <div style="margin-top:14px">${PROFILE_QUESTIONS.filter(q => q.key !== "criticality").map(q => `<fieldset class="q"><legend>${esc(q.q)}</legend>${segYesNo(q.key)}</fieldset>`).join("")}
+        <fieldset class="q"><legend>${esc(PROFILE_QUESTIONS.find(q => q.key === "criticality").q)}</legend><div class="seg" role="radiogroup">${[1, 2, 3].map(n => `<label><input type="radio" name="q_criticality" value="${n}" ${n === 2 ? "checked" : ""}><span>${CRIT_LABEL[n]}</span></label>`).join("")}</div></fieldset></div>
+      <label class="field"><span>المستند — ${DOC_TITLES.D2}</span><textarea id="fD2" placeholder="${esc(DOC_PLACEHOLDER.D2)}"></textarea></label>
+      ${uploadRow("fD2")}
+      <div id="fD1Wrap" class="hidden">
+        <label class="field"><span>مستند إضافي (D1) — ${DOC_TITLES.D1}</span><textarea id="fD1" placeholder="${esc(DOC_PLACEHOLDER.D1)}"></textarea></label>
+        ${uploadRow("fD1")}
+      </div>
+      <button type="button" class="linkbtn small" id="toggleD1Btn" data-act="toggleD1" style="display:block;margin-top:12px">+ إضافة مستند ثانٍ (اختياري)</button>
+      <div class="ferr" id="eDocs"></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
+        <button class="btn primary" data-act="addVendor">${state.sample ? "أضف المورد وحلّله" : "أضف المورد"}</button>
+        <button class="btn" data-act="back">إلغاء</button>
+      </div>
+    </div></section>
+    <section class="card rise sticky" style="animation-delay:80ms"><div class="card-h"><h3>الضوابط المنطبقة الآن</h3><span class="sub">تتغير مع إجاباتك</span></div>
+      <div class="card-b" id="appPreview"></div></section>
+  </div>`;
+  updatePreview();
+}
+function readForm() {
+  const val = k => { const el = document.querySelector(`input[name="q_${k}"]:checked`); return el ? Number(el.value) : 0; };
+  const profile = { data: val("data"), remote: val("remote"), cloud: val("cloud"), outsourcing: val("outsourcing"), monitoring: val("monitoring"),
+    personalData: val("personalData"), sensitiveData: val("sensitiveData"), criticality: val("criticality") || 2 };
+  if (!profile.outsourcing) profile.monitoring = 0;
+  if (!profile.personalData) profile.sensitiveData = 0;
+  return { name: $("#fName").value.trim(), service: $("#fService").value.trim(), profile,
+    docs: { D1: splitSentences($("#fD1").value), D2: splitSentences($("#fD2").value) }, chars: ($("#fD1").value + $("#fD2").value).length };
+}
+function updatePreview() {
+  const box = $("#appPreview"); if (!box) return;
+  const { profile } = readForm();
+  const app = applicability(profile);
+  const scored = app.filter(a => a.applies && a.c.scope === "vendor");
+  const other = app.filter(a => a.applies && a.c.scope !== "vendor");
+  box.innerHTML = `<div style="display:flex;align-items:baseline;gap:8px;margin-bottom:10px"><span class="code" style="font-size:33px;font-weight:600">${N(scored.length)}</span><span class="muted">متطلبات تُقيّم من وثائق هذا المورد</span></div>
+    ${scored.map((a, i) => `<div class="aprow rise" style="animation-delay:${i * 40}ms">${codeTag(a.c.code)}<div><div class="small" style="font-weight:500">${esc(a.c.title)}${a.c.national ? ` <span class="chip" style="color:var(--hi)">وطني</span>` : ""}</div><div class="small faint">${esc(a.reason)}</div></div></div>`).join("")}
+    ${other.length ? `<p class="small faint" style="margin:12px 0 0">ينطبق أيضًا ولا يُقيّم من وثائق المورد: ${other.map(a => codeTag(a.c.code)).join(" ")}</p>` : ""}`;
+}
+async function addVendor() {
+  const f = readForm();
+  const errs = { eName: "", eService: "", eDocs: "" };
+  if (f.name.length < 2) errs.eName = "أدخل اسم المورد.";
+  else if (VENDORS.some(v => norm(v.name) === norm(f.name))) errs.eName = "يوجد مورد بهذا الاسم. اختر اسمًا آخر.";
+  if (f.service.length < 3) errs.eService = "صف الخدمة التي يقدمها المورد في بضع كلمات.";
+  if (!f.docs.D1.length && !f.docs.D2.length) errs.eDocs = "الصق نص إحدى الوثيقتين على الأقل.";
+  else if (f.chars > 80000) errs.eDocs = "الوثائق أطول من الحد المسموح (80,000 حرف). اختصر النص ثم أعد المحاولة.";
+  for (const k of Object.keys(errs)) $("#" + k).textContent = errs[k];
+  const firstBad = Object.keys(errs).find(k => errs[k]);
+  if (firstBad) {
+    const target = { eName: "#fName", eService: "#fService", eDocs: "#fD2" }[firstBad];
+    $(target).scrollIntoView({ behavior: "smooth", block: "center" });
+    $(target).focus();
+    return;
+  }
+  const docs = {}; if (f.docs.D1.length) docs.D1 = f.docs.D1; if (f.docs.D2.length) docs.D2 = f.docs.D2;
+  const v = { id: "c" + Date.now().toString(36), name: f.name, short: initialOf(f.name), service: f.service, profile: f.profile, docs, custom: true };
+  VENDORS.push(v);
+  const saved = saveCustomVendors();
+  state.analyses[v.id] = analyze(v, v.docs, null, null);
+  go("vendors", v.id);
+  if (!saved) alertInline("أُضيف المورد لهذه الجلسة فقط، لأن المتصفح لا يسمح بحفظ البيانات.");
+  if (state.sample) analyzeVendorAI(v.id);
+}
+function deleteVendor(id, btn) {
+  if (btn.dataset.confirm !== "1") {
+    btn.dataset.confirm = "1"; btn.textContent = "اضغط مرة أخرى لتأكيد الحذف"; btn.style.color = "var(--hi)";
+    setTimeout(() => { if (btn.isConnected) { btn.dataset.confirm = ""; btn.textContent = "حذف المورد"; btn.style.color = ""; } }, 4000);
+    return;
+  }
+  const i = VENDORS.findIndex(v => v.id === id && v.custom); if (i < 0) return;
+  VENDORS.splice(i, 1); delete state.analyses[id];
+  saveCustomVendors(); const st = loadStore(); delete st[id]; saveStore(st);
+  go("vendors", null);
+}
+
+/* ---------- AI runs ---------- */
+const AI_ERR = {
+  not_granted: "لم يُسمح باستخدام الذكاء الاصطناعي في هذا العرض. النتائج المعروضة من محرك القواعد.",
+  rate_limited: "طلبات كثيرة خلال وقت قصير. انتظر دقيقة ثم أعد المحاولة.",
+  invalid_json: "لم يُرجع النموذج نتيجة بالصيغة المطلوبة. أعد المحاولة.",
+  session_expired: "انتهت جلسة الذكاء الاصطناعي. حدّث الصفحة ثم أعد المحاولة.",
+  refused: "رفض النموذج هذا الطلب. راجع النص ثم أعد المحاولة.",
+  prompt_too_large: "الوثائق أطول من الحد المسموح لتحليل واحد. اختصر النص ثم أعد المحاولة."
+};
+const aiErr = e => AI_ERR[e && e.code] || "تعذّر الوصول إلى الذكاء الاصطناعي الآن. النتائج المعروضة من محرك القواعد، وهي تعمل دون إنترنت.";
+
+/* ---------- Direct AI-provider API fallback (used only when the page runs OUTSIDE the artifact
+   environment that supplies window.claude, e.g. hosted on GitHub Pages).
+   The API key is entered by whoever uses the browser and is kept only in that browser's
+   localStorage — it is never written into this file, so it never appears in the page's source
+   or in a public repository. ---------- */
+const DIRECT_KEY_STORE = "radar.aiApiKey";
+const DIRECT_MODEL = "claude-sonnet-5";
+function getApiKey() { try { return localStorage.getItem(DIRECT_KEY_STORE) || ""; } catch { return ""; } }
+function setApiKey(k) { try { if (k) localStorage.setItem(DIRECT_KEY_STORE, k); else localStorage.removeItem(DIRECT_KEY_STORE); } catch { /* ignore */ } }
+function stripFences(t) { return String(t || "").replace(/^```(?:json)?\s*/i, "").replace(/```\s*$/, "").trim(); }
+async function anthropicComplete(prompt, opts = {}) {
+  const key = getApiKey();
+  if (!key) { const e = new Error("no api key"); e.code = "not_granted"; throw e; }
+  if (prompt.length > 600000) { const e = new Error("prompt too large"); e.code = "prompt_too_large"; throw e; }
+  let res;
+  try {
+    res = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: { "content-type": "application/json", "x-api-key": key, "anthropic-version": "2023-06-01", "anthropic-dangerous-direct-browser-access": "true" },
+      body: JSON.stringify({ model: DIRECT_MODEL, max_tokens: 4096, messages: [{ role: "user", content: prompt }] }),
+      signal: opts.signal
+    });
+  } catch (err) {
+    if (err && err.name === "AbortError") { const e = new Error("cancelled"); e.code = "cancelled"; throw e; }
+    throw err;
+  }
+  if (res.status === 429) { const e = new Error("rate limited"); e.code = "rate_limited"; throw e; }
+  if (res.status === 401 || res.status === 403) { const e = new Error("unauthorized"); e.code = "not_granted"; throw e; }
+  if (!res.ok) throw new Error("http " + res.status);
+  const data = await res.json();
+  const text = (Array.isArray(data.content) ? data.content : []).map(b => b.text || "").join("");
+  if (typeof opts.onText === "function") opts.onText({ text });
+  return text;
+}
+function makeDirectSample() {
+  if (!getApiKey()) return null;
+  const fn = async (prompt, opts = {}) => ({ text: await anthropicComplete(prompt, opts) });
+  fn.json = async (prompt, opts = {}) => {
+    const text = await anthropicComplete(prompt, opts);
+    try { return JSON.parse(stripFences(text)); }
+    catch { const e = new Error("invalid json"); e.code = "invalid_json"; throw e; }
+  };
+  return fn;
+}
+const STEP_TEXT = ["تحديد الضوابط المنطبقة من ملف المورد", "محرك القواعد: فحص البنود الإلزامية", "الذكاء الاصطناعي: قراءة الوثائق وتقييم كل متطلب", "التحقق من وجود كل اقتباس حرفيًا في النص", "حساب درجة الخطر ومقارنة المحركين"];
+function stepsHTML(run) {
+  return `<div class="steps">${STEP_TEXT.map((t, i) => { const st = run.steps[i] || "wait";
+    const extra = i === 2 && st === "run" ? ` <strong class="code" style="color:var(--accent)">— جارٍ العمل: ${N(run.secs)} ثانية${run.chars ? " · وصل " + run.chars.toLocaleString("ar") + " حرفًا حتى الآن" : " · بانتظار أول رد"}</strong>` : "";
+    return `<div class="step ${st === "wait" ? "" : st}"><span class="ic">${st === "done" ? "✓" : st === "skip" ? "–" : ""}</span><span>${t}${extra}</span></div>`; }).join("")}</div>
+  ${run.steps[2] === "run" && run.secs >= 20 ? `<p class="small muted" style="margin:8px 0 0">التحليل قد يستغرق دقيقة أو أكثر مع مستندات طويلة — العداد أعلاه يتحرك طالما لا تزال العملية جارية فعليًا.</p>` : ""}`;
+}
+function renderSteps(run) {
+  const box = run.boxId ? document.getElementById(run.boxId) : null; if (!box) return;
+  box.innerHTML = `<section class="card" style="margin-bottom:16px"><div class="card-b" style="display:flex;justify-content:space-between;gap:16px;align-items:flex-start;flex-wrap:wrap">
+    ${stepsHTML(run)}${run.ctl && run.steps[2] === "run" ? `<button class="btn" data-act="stop">إيقاف</button>` : ""}</div>${run.error ? `<div class="card-b" style="padding-top:0"><div class="err">${esc(run.error)}</div></div>` : ""}</section>`;
+}
+async function runAI(run, vendor, docs, cacheOK) {
+  const app = applicability(vendor.profile);
+  const wait = ms => new Promise(r => setTimeout(r, ms));
+  run.steps = ["run"]; renderSteps(run); await wait(350);
+  run.steps = ["done", "run"]; renderSteps(run); await wait(450);
+  run.steps = ["done", "done", "run"]; run.secs = 0; run.chars = 0; renderSteps(run);
+  run.ctl = new AbortController();
+  const timer = setInterval(() => { run.secs++; renderSteps(run); }, 1000);
+  let raw = null;
+  try {
+    raw = await state.sample.json(buildPrompt(vendor, docs, app), { modelTier: "default", signal: run.ctl.signal, cache: cacheOK,
+      onText: ({ text }) => { run.chars = text.length; } });
+  } catch (e) {
+    run.steps = ["done", "done", "skip", "skip", "done"]; run.error = e && e.code === "cancelled" ? "أُوقف التحليل. النتائج المعروضة من محرك القواعد." : aiErr(e);
+  } finally { clearInterval(timer); run.ctl = null; }
+  if (raw) { run.steps = ["done", "done", "done", "run"]; renderSteps(run); await wait(500); run.steps = ["done", "done", "done", "done", "run"]; renderSteps(run); await wait(400); run.steps = ["done", "done", "done", "done", "done"]; }
+  renderSteps(run);
+  return raw;
+}
+async function analyzeVendorAI(id) {
+  if (!state.sample || state.busy) return;
+  const v = VENDORS.find(x => x.id === id);
+  const run = { vendorId: id, boxId: "progress", steps: [] };
+  state.busy = run; renderVendor(id);
+  const raw = await runAI(run, v, v.docs, true);
+  state.busy = null;
+  if (raw) { const at = Date.now(); state.analyses[id] = analyze(v, v.docs, raw, at); persistAI(v, raw, at); }
+  if (state.view === "vendors" && state.vendorId === id) { renderVendor(id); if (run.error || raw) { const box = $("#progress"); if (box) { renderSteps(run); } } }
+}
+async function followUp(id) {
+  if (!state.sample) return;
+  const v = VENDORS.find(x => x.id === id), a = state.analyses[id];
+  const gaps = Object.keys(a.final).filter(k => a.final[k].status !== "met").map(k => `- ${k} ${CTRL[k].title} (${STATUS_LABEL[a.final[k].status]}): ${CTRL[k].summary}${a.final[k].followup ? " — سؤال مقترح: " + a.final[k].followup : ""}`).join("\n");
+  const contra = a.contradictions.map(c => `- تناقض: «${c.a.quote}» مقابل «${c.b.quote}»`).join("\n");
+  const box = $("#followupBox");
+  box.innerHTML = `<section class="card" style="margin-top:16px"><div class="card-h"><h3>رسالة متابعة للمورد</h3><div style="display:flex;gap:8px"><button class="btn" data-act="copy" disabled>نسخ الرسالة</button></div></div>
+    <div class="card-b"><div id="fuText" style="white-space:pre-wrap;line-height:1.9" class="muted">الذكاء الاصطناعي يكتب الرسالة…</div></div></section>`;
+  box.scrollIntoView({ behavior: "smooth", block: "start" });
+  try {
+    const { text } = await state.sample(`اكتب رسالة بريد إلكتروني رسمية ومهذبة وقصيرة باللغة العربية من إدارة الأمن السيبراني في الجهة إلى المورد "${v.name}"، تطلب فيها استكمال المتطلبات التالية المستندة إلى الضوابط الأساسية للأمن السيبراني ECC-2:2024 أو نظام حماية البيانات الشخصية بحسب كل بند، مع ذكر رمز كل متطلب، وطلب الرد خلال 10 أيام عمل مع الأدلة الداعمة. لا تضف متطلبات غير مذكورة. ابدأ بسطر الموضوع.\n\n${gaps}\n${contra}`,
+      { modelTier: "default", onText: ({ text }) => { const el = $("#fuText"); if (el) { el.textContent = text; el.classList.remove("muted"); } } });
+    const el = $("#fuText"); if (el) el.textContent = text;
+    const cb = $("[data-act=copy]"); if (cb) cb.disabled = false;
+  } catch (e) { const el = $("#fuText"); if (el) { el.textContent = aiErr(e); el.className = "err"; } }
+}
+
+/* ---------- live lab ---------- */
+function renderLab() {
+  const L = state.lab; const res = L.result;
+  main.innerHTML = `
+  <div class="head rise"><div><h2>المختبر الحي</h2>
+    <p>وثائق مورد تجريبي نظيفة تستوفي كل المتطلبات. ولّد حالة عشوائية لا يعرفها أحد مسبقًا، أو عدّل أي جملة بنفسك، ثم شغّل التحليل وشاهد النتيجة. عند توليد حالة عشوائية تقيّم المنصة نفسها أمامك.</p></div></div>
+  <div class="grid g-2b">
+    <section class="card rise"><div class="card-h"><h3>${esc(LAB_VENDOR.name)}</h3><span class="sub">جملة واحدة في كل سطر</span></div>
+      <div class="card-b">
+        <label class="small muted" for="labD1">D1 — ${DOC_TITLES.D1}</label><textarea id="labD1" dir="rtl">${esc(L.docs.D1.join("\n"))}</textarea>
+        ${uploadRow("labD1")}
+        <label class="small muted" for="labD2" style="display:block;margin-top:10px">D2 — ${DOC_TITLES.D2}</label><textarea id="labD2" dir="rtl">${esc(L.docs.D2.join("\n"))}</textarea>
+        ${uploadRow("labD2")}
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
+          <button class="btn primary" data-act="labRun" ${L.running ? "disabled" : ""}>حلّل الآن</button>
+          <button class="btn" data-act="labMutate" ${L.running ? "disabled" : ""}>ولّد حالة عشوائية</button>
+          <button class="btn" data-act="labReset" ${L.running ? "disabled" : ""}>أعد النص النظيف</button>
+        </div>
+        <p class="note" id="labNote" style="margin:12px 0 0">${L.applied.length && !L.edited ? `ولّدت المنصة حالة عشوائية فيها ${N(L.applied.length + L.neutral.length)} تعديلات. التعديلات مخفية حتى ينتهي التحليل.` : L.edited ? "عُدّل النص يدويًا: ستُعرض النتائج دون تقييم ذاتي لأن التعديلات غير معروفة للمنصة." : "النص الحالي نظيف ويستوفي كل المتطلبات."}</p>
+      </div></section>
+    <section class="rise" style="animation-delay:80ms"><div id="labProgress"></div><div id="labResult">${res ? labResultHTML(res) : `<div class="card card-b muted">شغّل التحليل لعرض النتائج هنا.</div>`}</div></section>
+  </div>`;
+}
+function labResultHTML(res) {
+  const a = res.analysis;
+  let html = `<section class="card" style="margin-bottom:16px"><div class="card-h"><h3>النتيجة</h3><div style="display:flex;gap:8px;align-items:center"><span class="code" style="font-size:19px;font-weight:600;color:${LEVEL_COLOR[a.score.level]}">${N(a.score.score)}</span>${levelBadge(a.score.level)}</div></div>
+    <div class="tscroll"><table><thead><tr><th>الضابط</th><th>القواعد</th><th>الذكاء الاصطناعي</th><th>الدليل</th></tr></thead><tbody>
+    ${Object.keys(a.final).map((code, i) => { const r = a.rules.results[code], ai = a.ai && a.ai.results[code], f = a.final[code];
+      return `<tr class="rise" style="animation-delay:${i * 50}ms"><td>${codeTag(code)}<div class="small" style="margin-top:3px">${esc(CTRL[code].title)}</div></td><td>${statusBadge(r.status)}</td><td>${ai ? statusBadge(ai.status) : `<span class="faint small">غير متاح</span>`}</td>
+      <td class="small">${f.ev ? `«${esc(f.ev.quote)}» <span class="faint code">${f.ev.doc}·S${f.ev.sid}</span>` : `<span class="muted">${esc(f.reason || "لا يوجد نص يغطي المتطلب.")}</span>`}</td></tr>`; }).join("")}
+    </tbody></table></div>
+    ${a.contradictions.length ? `<div class="card-b"><div class="err">تناقض: ${esc(a.contradictions[0].explanation)}</div></div>` : ""}</section>`;
+  if (res.truth) {
+    const ev = res.truth;
+    html += `<section class="card rise"><div class="card-h"><h3>التقييم الذاتي للمنصة</h3><span class="sub">مقارنة بالتعديلات المخفية</span></div><div class="card-b">
+      <div class="eval">
+        <div class="box"><div class="small muted">اكتشاف محرك القواعد</div><div class="v code">${N(ev.rulesHit)}/${N(ev.expected.length)}</div></div>
+        <div class="box"><div class="small muted">اكتشاف الذكاء الاصطناعي</div><div class="v code">${ev.aiAvailable ? N(ev.aiHit) + "/" + N(ev.expected.length) : "—"}</div></div>
+        <div class="box"><div class="small muted">إنذارات خاطئة</div><div class="v code">${N(ev.falseAlarms)}</div></div>
+      </div>
+      <h4 style="margin:16px 0 6px;font-size:14px">التعديلات التي كانت مخفية</h4>
+      ${ev.items.map(it => `<div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:8px 0;border-top:1px solid var(--line)">
+        <span>${esc(it.label)} ${it.code ? codeTag(it.code) : `<span class="chip">تعديل محايد</span>`}</span>
+        <span class="small">${it.code ? `القواعد: ${it.rules ? "✓ اكتشف" : "✗ لم يكتشف"} · الذكاء الاصطناعي: ${ev.aiAvailable ? (it.ai ? "✓ اكتشف" : "✗ لم يكتشف") : "—"}` : "لا ينبغي أن يرفع أي فجوة"}</span></div>`).join("")}
+      ${ev.falseAlarms ? `<p class="small muted" style="margin:10px 0 0">الإنذارات الخاطئة: ${ev.falseList.map(codeTag).join(" ")}</p>` : ""}
+    </div></section>`;
+  }
+  return html;
+}
+function readLabDocs() {
+  const split = t => t.split("\n").map(s => s.trim()).filter(Boolean);
+  return { D1: split($("#labD1").value), D2: split($("#labD2").value) };
+}
+function labMutate() {
+  const pool = MUTATIONS.slice(); const picked = []; const used = new Set();
+  while (picked.length < 2 && pool.length) { const m = pool.splice(Math.floor(Math.random() * pool.length), 1)[0]; if (!used.has(m.slot)) { picked.push(m); used.add(m.slot); } }
+  const neutral = []; const n = NEUTRAL[Math.floor(Math.random() * NEUTRAL.length)];
+  if (Math.random() < 0.7 && !used.has(n.slot)) neutral.push(n);
+  const d = clone(LAB_CLEAN); for (const m of picked.concat(neutral)) m.apply(d);
+  Object.assign(state.lab, { docs: d, applied: picked, neutral, edited: false, result: null });
+  renderLab();
+}
+async function labRun() {
+  const L = state.lab; if (L.running) return;
+  const docs = readLabDocs();
+  if (!docs.D1.length && !docs.D2.length) { $("#labNote").outerHTML = `<p class="err" id="labNote" style="margin:12px 0 0">أدخل نصًا في إحدى الوثيقتين على الأقل.</p>`; return; }
+  if (JSON.stringify(docs) !== JSON.stringify(L.docs)) { L.edited = true; L.docs = docs; }
+  L.running = true; L.result = null; renderLab();
+  const run = { boxId: "labProgress", steps: [] };
+  state.labRun = run;
+  let raw = null;
+  if (state.sample) raw = await runAI(run, LAB_VENDOR, docs, false);
+  else { run.steps = ["done", "done", "skip", "skip", "done"]; run.error = "الذكاء الاصطناعي غير متاح في هذا العرض، فالتحليل من محرك القواعد فقط."; }
+  const analysis = analyze(LAB_VENDOR, docs, raw, Date.now());
+  L.running = false; state.labRun = null;
+  L.result = { analysis, truth: (L.applied.length && !L.edited) ? grade(analysis, L.applied, L.neutral) : null };
+  renderLab(); renderSteps(run);
+}
+function grade(a, applied, neutral) {
+  const expected = []; for (const m of applied) for (const code of Object.keys(m.expect)) expected.push({ code, label: m.label });
+  const aiAvailable = !!a.ai;
+  const items = expected.map(e => ({ ...e, rules: a.rules.results[e.code] && a.rules.results[e.code].status !== "met", ai: aiAvailable && a.ai.results[e.code] && a.ai.results[e.code].status !== "met" }));
+  const expCodes = new Set(expected.map(e => e.code));
+  const falseList = Object.keys(a.final).filter(c => !expCodes.has(c) && a.final[c].status !== "met");
+  return { expected, items: items.concat(neutral.map(n => ({ label: n.label }))), rulesHit: items.filter(i => i.rules).length, aiHit: items.filter(i => i.ai).length, aiAvailable, falseAlarms: falseList.length, falseList };
+}
+
+/* ---------- library ---------- */
+function renderLibrary(filter = state.libFilter || "all") {
+  state.libFilter = filter;
+  const show = c => filter === "all" || (filter === "vendor" && c.scope === "vendor") || (filter === "national" && c.national) || (filter === "pdpl" && c.framework === "PDPL");
+  const frameworkGroups = [
+    { fw: "ECC", label: "الضوابط الأساسية للأمن السيبراني (ECC-2:2024)", url: ECC_SOURCE.url, linkText: "الوثيقة الرسمية", subdomains: SUBDOMAINS },
+    { fw: "PDPL", label: "نظام حماية البيانات الشخصية ولائحته التنفيذية (PDPL)", url: PDPL_SOURCE.url, linkText: "اللائحة التنفيذية", subdomains: PDPL_SUBDOMAINS }
+  ];
+  main.innerHTML = `
+  <div class="head rise"><div><h2>مكتبة الضوابط والأطر</h2>
+    <p>ما تقيّمه هذه المنصة من ضوابط الأطراف الخارجية والحوسبة السحابية في ECC-2:2024، ومن متطلبات اختيار جهة المعالجة ونقل البيانات خارج المملكة في نظام حماية البيانات الشخصية (PDPL)، وحالة كل مورد أمام كل ضابط.</p></div></div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
+    ${[["all", "كل الضوابط"], ["vendor", "تُقيّم من وثائق المورد"], ["national", "متطلبات وطنية بلا مقابل دولي"], ["pdpl", "حماية البيانات الشخصية (PDPL)"]].map(([k, t]) => `<button class="btn" data-act="libFilter" data-f="${k}" aria-pressed="${k === filter}" style="${k === filter ? "border-color:var(--accent);color:var(--accent);font-weight:500" : ""}">${t}</button>`).join("")}
+  </div>
+  ${frameworkGroups.map(g => { const secs = g.subdomains.map(sd => { const rows = CONTROLS.filter(c => c.sub === sd.code && show(c)); if (!rows.length) return "";
+    return `<section class="card rise" style="margin-bottom:16px"><div class="card-h"><h3>${codeTag(sd.code)} ${esc(sd.title)}</h3><span class="sub">${sd.page ? "صفحة " + sd.page + " في النسخة الإنجليزية الرسمية" : esc(sd.article)}</span></div>
+    <div class="tscroll"><table><thead><tr><th>الضابط</th><th>ISO 27001:2022</th><th>NIST CSF 2.0</th><th>الموردون</th></tr></thead><tbody>
+    ${rows.map(c => `<tr><td style="min-width:300px">${codeTag(c.code)} <strong>${esc(c.title)}</strong>${c.national ? ` <span class="chip" style="color:var(--hi)">متطلب وطني</span>` : ""}
+      <div class="small muted" style="margin-top:4px">${esc(c.summary)}</div>
+      <div class="small faint" style="margin-top:4px">${c.scope === "vendor" ? "يُقيّم من وثائق المورد" : c.scope === "platform" ? "تنفذه هذه المنصة: تقييم المخاطر نفسه" : "التزام داخلي على الجهة"}</div></td>
+      <td style="min-width:190px">${c.iso.length ? c.iso.map(k => `<div class="small">${isoChip(k)} ${esc(ISO[k])}</div>`).join("") : `<span class="small faint">لا مقابل مباشر</span>`}</td>
+      <td style="min-width:190px">${c.nist.length ? c.nist.map(k => `<div class="small"><span class="chip code">${k}</span> ${esc(NIST[k])}</div>`).join("") : `<span class="small faint">لا مقابل مباشر</span>`}</td>
+      <td style="min-width:170px">${VENDORS.map(v => { const f = state.analyses[v.id].final[c.code]; return `<div class="small" style="display:flex;justify-content:space-between;gap:6px"><span>${esc(v.name)}</span>${f ? statusBadge(f.status) : `<span class="faint">—</span>`}</div>`; }).join("")}</td></tr>`).join("")}
+    </tbody></table></div></section>`; }).join("");
+    if (!secs.trim()) return "";
+    return `<div class="rise" style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin:22px 0 10px"><h3 style="margin:0;font-size:16px">${esc(g.label)}</h3><a class="btn" href="${g.url}" target="_blank" rel="noopener">${g.linkText}</a></div>${secs}`; }).join("")}
+  <p class="note">الملخصات العربية صياغة استرشادية من فريق المشروع. النص الملزم لضوابط ECC هو الوثيقة الرسمية الصادرة عن الهيئة الوطنية للأمن السيبراني (النسخة العربية معتمدة عند الاختلاف)، ولمتطلبات PDPL هو نظام حماية البيانات الشخصية ولائحته التنفيذية الصادران عن الهيئة السعودية للبيانات والذكاء الاصطناعي. أسماء ضوابط ISO وNIST مترجمة، والربط بين الأطر استرشادي أعدّه الفريق للمقارنة؛ متطلبات PDPL هنا مقصورة على ما يخص جهة المعالجة (المورد) تحديدًا، لا برنامج الجهة الكامل لحماية البيانات.</p>`;
+}
+
+/* ---------- exports ---------- */
+function csvCell(x) { const s = String(x ?? ""); return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; }
+async function saveFile(filename, data) {
+  if (!state.downloads) return;
+  try { await state.downloads.save({ filename, data }); } catch (e) { if (e && e.code !== "declined") alertInline("تعذّر تنزيل الملف. حاول مرة أخرى."); }
+}
+function alertInline(msg) { const p = document.createElement("p"); p.className = "err"; p.textContent = msg; main.prepend(p); setTimeout(() => p.remove(), 5000); }
+function vendorReport(id) {
+  const v = VENDORS.find(x => x.id === id), a = state.analyses[id];
+  const rows = Object.keys(a.final).map(k => { const f = a.final[k], c = CTRL[k];
+    return `<tr><td>${k}</td><td>${esc(c.title)}</td><td>${STATUS_LABEL[f.status]}</td><td>${f.ev ? "«" + esc(f.ev.quote) + "» (" + f.ev.doc + " S" + f.ev.sid + ")" : "لا يوجد نص يغطي المتطلب"}</td><td>${c.iso.map(x => "A." + x).join("، ") || "—"}</td><td>${c.nist.join("، ") || "—"}</td></tr>`; }).join("");
+  return `<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>تقرير ${esc(v.name)}</title><style>body{font-family:Tahoma,sans-serif;max-width:900px;margin:30px auto;padding:0 16px;color:#12212b;line-height:1.7}table{border-collapse:collapse;width:100%;font-size:13px}td,th{border:1px solid #ccd6dc;padding:6px 8px;text-align:right;vertical-align:top}th{background:#eef1f3}h1{font-size:22px}</style></head><body>
+  <h1>تقرير تقييم مخاطر المورد: ${esc(v.name)}</h1><p>${esc(v.service)} — تاريخ التقرير: ${fmtTime(Date.now())}</p>
+  <p><strong>درجة الخطر:</strong> ${a.score.score} (${LEVEL_LABEL[a.score.level]}) = الأثر ${a.score.impact} × الاحتمالية ${a.score.likelihood} × 4</p>
+  <p><strong>مصدر النتائج:</strong> ${a.ai ? "محرك القواعد + الذكاء الاصطناعي مع التحقق الحرفي من الاقتباسات" : "محرك القواعد"}</p>
+  ${a.contradictions.length ? `<h2>التناقضات</h2>${a.contradictions.map(c => `<p>${esc(c.explanation)}<br>«${esc(c.a.quote)}» مقابل «${esc(c.b.quote)}»</p>`).join("")}` : ""}
+  <h2>الأدلة مقابل الضوابط</h2><table><tr><th>الضابط</th><th>المتطلب</th><th>الحكم</th><th>الدليل</th><th>ISO 27001:2022</th><th>NIST CSF 2.0</th></tr>${rows}</table>
+  <p style="font-size:12px;color:#555">بيانات تجريبية لأغراض العرض. الملخصات والربط بين الأطر استرشادية، والنص الملزم هو ضوابط الهيئة الوطنية للأمن السيبراني ونظام حماية البيانات الشخصية ولائحته التنفيذية، بحسب كل متطلب.</p></body></html>`;
+}
+
+/* ---------- events ---------- */
+document.addEventListener("click", e => {
+  const tab = e.target.closest("nav.tabs button"); if (tab) return go(tab.dataset.view, tab.dataset.view === "vendors" ? null : undefined);
+  const el = e.target.closest("[data-act]"); if (!el) return;
+  const act = el.dataset.act;
+  if (act === "vendor") return go("vendors", el.dataset.id);
+  if (act === "back") return go("vendors", null);
+  if (act === "ai") return analyzeVendorAI(state.vendorId);
+  if (act === "stop") { if (state.busy && state.busy.ctl) state.busy.ctl.abort(); if (state.labRun && state.labRun.ctl) state.labRun.ctl.abort(); return; }
+  if (act === "followup") return followUp(state.vendorId);
+  if (act === "copy") { const t = ($("#fuText") || {}).textContent || ""; if (navigator.clipboard) navigator.clipboard.writeText(t).then(() => { el.textContent = "نُسخت"; }, () => { el.textContent = "انسخ يدويًا"; }); return; }
+  if (act === "report") return saveFile(`تقرير-${state.vendorId}.html`, vendorReport(state.vendorId));
+  if (act === "jump") { const s = document.getElementById(`s-${el.dataset.doc}-${el.dataset.sid}`); if (s) { s.scrollIntoView({ behavior: "smooth", block: "center" }); s.classList.remove("flash"); void s.offsetWidth; s.classList.add("flash"); } return; }
+  if (act === "editUpload") { expandFromChip(el.dataset.target); return; }
+  if (act === "toggleDoc") {
+    const section = el.closest(".doc"); if (!section) return;
+    const total = section.querySelectorAll(".sent").length;
+    const defaultMode = section.dataset.defaultMode || "cited";
+    if (section.dataset.mode === "all") { section.dataset.mode = defaultMode; el.textContent = `عرض النص الكامل (${total} جملة)`; }
+    else { section.dataset.mode = "all"; el.textContent = defaultMode === "cited" ? "طيّ إلى الجمل ذات الصلة فقط" : "طيّ (إخفاء النص)"; }
+    return;
+  }
+  if (act === "toggleD1") {
+    const wrap = document.getElementById("fD1Wrap"); if (!wrap) return;
+    const showing = wrap.classList.contains("hidden");
+    wrap.classList.toggle("hidden");
+    el.textContent = showing ? "− إخفاء المستند الثاني" : "+ إضافة مستند ثانٍ (اختياري)";
+    if (showing) { const ta = document.getElementById("fD1"); if (ta) ta.focus(); }
+    return;
+  }
+  if (act === "newVendor") return go("vendors", "new");
+  if (act === "addVendor") return addVendor();
+  if (act === "delVendor") return deleteVendor(state.vendorId, el);
+  if (act === "labMutate") return labMutate();
+  if (act === "labReset") { Object.assign(state.lab, { docs: clone(LAB_CLEAN), applied: [], neutral: [], edited: false, result: null }); return renderLab(); }
+  if (act === "labRun") return labRun();
+  if (act === "libFilter") return renderLibrary(el.dataset.f);
+});
+document.addEventListener("keydown", e => { if ((e.key === "Enter" || e.key === " ") && e.target.matches(".vrow")) { e.preventDefault(); go("vendors", e.target.dataset.id); } });
+document.addEventListener("change", e => {
+  if (e.target.name && e.target.name.startsWith("q_")) updatePreview();
+  if (e.target.matches('input[type="file"][data-target]')) handleFileUpload(e.target);
+});
+document.addEventListener("input", e => {
+  if (e.target.id === "fName" || e.target.id === "fService" || e.target.id === "fD1" || e.target.id === "fD2") { const m = { fName: "eName", fService: "eService", fD1: "eDocs", fD2: "eDocs" }[e.target.id]; const el = document.getElementById(m); if (el) el.textContent = ""; } if (e.target.id === "labD1" || e.target.id === "labD2") { if (state.lab.applied.length && !state.lab.edited) { state.lab.edited = true; const n = $("#labNote"); if (n) n.textContent = "عُدّل النص يدويًا: ستُعرض النتائج دون تقييم ذاتي لأن التعديلات غير معروفة للمنصة."; } } });
+
+/* ---------- theme ---------- */
+(function theme() {
+  const root = document.documentElement; let t = null;
+  try { t = localStorage.getItem("radar.theme"); } catch { /* ignore */ }
+  if (t) root.dataset.theme = t;
+  $("#themeBtn").addEventListener("click", () => {
+    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    try { localStorage.setItem("radar.theme", root.dataset.theme); } catch { /* ignore */ }
+    render();
+  });
+})();
+
+/* ---------- boot ---------- */
+loadCustomVendors();
+initAnalyses();
+render();
+async function initAI() {
+  const pill = $("#aiPill"), txt = $("#aiPillText");
+  let sample = null, downloads = null;
+  let usingHostAI = false;
+  try { if (window.claude && window.claude.use) { [sample, downloads] = await Promise.all([window.claude.use("sample"), window.claude.use("downloads")]); usingHostAI = !!sample; } } catch { /* absent */ }
+  if (!sample) sample = makeDirectSample();
+  state.sample = sample; state.downloads = downloads;
+  pill.className = "pill " + (sample ? "on" : "off");
+  txt.textContent = sample ? "الذكاء الاصطناعي جاهز" : (usingHostAI === false && getApiKey() ? "تعذّر إعداد الذكاء الاصطناعي" : "محرك القواعد فقط — اضغط هنا لإضافة مفتاح API");
+  if (state.view === "vendors" && state.vendorId && !state.busy) renderVendor(state.vendorId);
+}
+(() => {
+  const pill = $("#aiPill");
+  pill.style.cursor = "pointer";
+  pill.title = "اضغط لإضافة أو تغيير مفتاح تفعيل الذكاء الاصطناعي لهذه الصفحة";
+  pill.addEventListener("click", async () => {
+    if (window.claude && window.claude.use) return; // AI is already managed automatically by the hosting environment, nothing to configure
+    const current = getApiKey();
+    const val = prompt(current
+      ? "مفتاح تفعيل الذكاء الاصطناعي محفوظ حاليًا في هذا المتصفح فقط.\nالصقه هنا لتغييره، أو امسحه واضغط موافق لإزالته:"
+      : "الصق مفتاح تفعيل الذكاء الاصطناعي لتفعيل تحليل الذكاء الاصطناعي في هذه الصفحة (راجع دليل الإعداد للحصول عليه).\nيُحفظ فقط في هذا المتصفح ولا يُرسل لأي مكان سوى مزوّد الخدمة:", current || "");
+    if (val === null) return;
+    setApiKey(val.trim());
+    await initAI();
+  });
+})();
+initAI();
+</script>
+</body>
+</html>
