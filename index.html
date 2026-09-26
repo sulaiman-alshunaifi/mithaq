@@ -762,13 +762,24 @@ function saveCustomVendors() {
   const list = VENDORS.filter(v => v.custom).map(({ id, name, short, service, profile, docs }) => ({ id, name, short, service, profile, docs }));
   try { localStorage.setItem(CUSTOM_KEY, JSON.stringify(list)); return true; } catch { return false; }
 }
+// A page-footer/header artifact left over from PDF extraction: just a page number,
+// a "8 / 9" or "8 من 9" pager, or a bare digit run — never real contractual text,
+// so it shouldn't be stored as a citable "sentence" (it can't prove any requirement
+// and only clutters the evidence view).
+function isPageNumberNoise(t) {
+  const d = t.replace(/[٠-٩]/g, ch => "٠١٢٣٤٥٦٧٨٩".indexOf(ch));
+  return /^[\s\d\/\-–—.]+$/.test(d) || /^\d+\s*(\/|-|–|—|من)\s*\d+$/.test(d.trim());
+}
 function splitSentences(text) {
   const out = [];
   // NFKC: some Arabic PDF/Word exports paste as presentation-form glyphs instead of
   // standard letters; folding here keeps the stored sentence text itself canonical
   // (matching in the rules engine is normalized separately, see norm()).
   for (const line of String(text || "").normalize("NFKC").replace(/\r/g, "").split("\n")) {
-    for (const part of line.split(/(?<=[.!?؟])\s+/)) { const t = part.trim(); if (t.length > 1) out.push(t.slice(0, 600)); }
+    for (const part of line.split(/(?<=[.!?؟])\s+/)) {
+      const t = part.trim();
+      if (t.length > 1 && !isPageNumberNoise(t)) out.push(t.slice(0, 600));
+    }
   }
   return out.slice(0, 400);
 }
